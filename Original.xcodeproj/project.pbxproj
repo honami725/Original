@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB42F1C758AA3005AC2EC /* WeightViewController.swift */; };
 		223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */; };
-		223DB4341C75ABAF005AC2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */; };
+		223DB4361C75F00A005AC2EC /* MorningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4351C75F00A005AC2EC /* MorningViewController.swift */; };
+		223DB4381C761087005AC2EC /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4371C761087005AC2EC /* LunchViewController.swift */; };
+		223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */; };
+		223DB43E1C761196005AC2EC /* DinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB43D1C761196005AC2EC /* DinnerViewController.swift */; };
 		229068491C74C2570081A4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068481C74C2570081A4CD /* AppDelegate.swift */; };
 		2290684B1C74C2570081A4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290684A1C74C2570081A4CD /* ViewController.swift */; };
 		2290684E1C74C2570081A4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290684C1C74C2570081A4CD /* Main.storyboard */; };
@@ -38,7 +41,10 @@
 /* Begin PBXFileReference section */
 		223DB42F1C758AA3005AC2EC /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyFatViewController.swift; sourceTree = "<group>"; };
-		223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		223DB4351C75F00A005AC2EC /* MorningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorningViewController.swift; sourceTree = "<group>"; };
+		223DB4371C761087005AC2EC /* LunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
+		223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		223DB43D1C761196005AC2EC /* DinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerViewController.swift; sourceTree = "<group>"; };
 		229068451C74C2570081A4CD /* Original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068481C74C2570081A4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2290684A1C74C2570081A4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,11 +110,14 @@
 				229068481C74C2570081A4CD /* AppDelegate.swift */,
 				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				2290684C1C74C2570081A4CD /* Main.storyboard */,
+				223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */,
 				2290684F1C74C2570081A4CD /* Assets.xcassets */,
 				229068541C74C2570081A4CD /* Info.plist */,
 				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
 				223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */,
-				223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */,
+				223DB4351C75F00A005AC2EC /* MorningViewController.swift */,
+				223DB4371C761087005AC2EC /* LunchViewController.swift */,
+				223DB43D1C761196005AC2EC /* DinnerViewController.swift */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -238,7 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223DB4341C75ABAF005AC2EC /* LaunchScreen.storyboard in Resources */,
+				223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */,
 				229068501C74C2570081A4CD /* Assets.xcassets in Resources */,
 				2290684E1C74C2570081A4CD /* Main.storyboard in Resources */,
 			);
@@ -266,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
+				223DB4361C75F00A005AC2EC /* MorningViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
+				223DB4381C761087005AC2EC /* LunchViewController.swift in Sources */,
+				223DB43E1C761196005AC2EC /* DinnerViewController.swift in Sources */,
 				223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
 			);
