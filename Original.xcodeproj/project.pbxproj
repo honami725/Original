@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB42F1C758AA3005AC2EC /* WeightViewController.swift */; };
+		223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */; };
+		223DB4341C75ABAF005AC2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */; };
 		229068491C74C2570081A4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068481C74C2570081A4CD /* AppDelegate.swift */; };
 		2290684B1C74C2570081A4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290684A1C74C2570081A4CD /* ViewController.swift */; };
 		2290684E1C74C2570081A4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290684C1C74C2570081A4CD /* Main.storyboard */; };
 		229068501C74C2570081A4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2290684F1C74C2570081A4CD /* Assets.xcassets */; };
-		229068531C74C2570081A4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229068511C74C2570081A4CD /* LaunchScreen.storyboard */; };
 		2290685E1C74C2570081A4CD /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290685D1C74C2570081A4CD /* OriginalTests.swift */; };
 		229068691C74C2570081A4CD /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068681C74C2570081A4CD /* OriginalUITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		223DB42F1C758AA3005AC2EC /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyFatViewController.swift; sourceTree = "<group>"; };
+		223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229068451C74C2570081A4CD /* Original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068481C74C2570081A4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2290684A1C74C2570081A4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2290684D1C74C2570081A4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2290684F1C74C2570081A4CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		229068521C74C2570081A4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229068541C74C2570081A4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229068591C74C2570081A4CD /* OriginalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2290685D1C74C2570081A4CD /* OriginalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTests.swift; sourceTree = "<group>"; };
@@ -101,8 +105,10 @@
 				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				2290684C1C74C2570081A4CD /* Main.storyboard */,
 				2290684F1C74C2570081A4CD /* Assets.xcassets */,
-				229068511C74C2570081A4CD /* LaunchScreen.storyboard */,
 				229068541C74C2570081A4CD /* Info.plist */,
+				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
+				223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */,
+				223DB4331C75ABAF005AC2EC /* LaunchScreen.storyboard */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -232,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229068531C74C2570081A4CD /* LaunchScreen.storyboard in Resources */,
+				223DB4341C75ABAF005AC2EC /* LaunchScreen.storyboard in Resources */,
 				229068501C74C2570081A4CD /* Assets.xcassets in Resources */,
 				2290684E1C74C2570081A4CD /* Main.storyboard in Resources */,
 			);
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
+				223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,14 +310,6 @@
 				2290684D1C74C2570081A4CD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		229068511C74C2570081A4CD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				229068521C74C2570081A4CD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,6 +487,7 @@
 				2290686F1C74C2570081A4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229068701C74C2570081A4CD /* Build configuration list for PBXNativeTarget "OriginalTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				229068721C74C2570081A4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229068731C74C2570081A4CD /* Build configuration list for PBXNativeTarget "OriginalUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				229068751C74C2570081A4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
