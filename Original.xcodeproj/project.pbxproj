@@ -19,6 +19,8 @@
 		229068501C74C2570081A4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2290684F1C74C2570081A4CD /* Assets.xcassets */; };
 		2290685E1C74C2570081A4CD /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290685D1C74C2570081A4CD /* OriginalTests.swift */; };
 		229068691C74C2570081A4CD /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068681C74C2570081A4CD /* OriginalUITests.swift */; };
+		7A1692981C7626B90092F933 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1692971C7626B90092F933 /* ColorManager.swift */; };
+		7A16929B1C7627470092F933 /* lit-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A16929A1C7627470092F933 /* lit-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		229068641C74C2570081A4CD /* OriginalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068681C74C2570081A4CD /* OriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalUITests.swift; sourceTree = "<group>"; };
 		2290686A1C74C2570081A4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A1692971C7626B90092F933 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		7A16929A1C7627470092F933 /* lit-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lit-icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +111,9 @@
 		229068471C74C2570081A4CD /* Original */ = {
 			isa = PBXGroup;
 			children = (
-				229068481C74C2570081A4CD /* AppDelegate.swift */,
-				2290684A1C74C2570081A4CD /* ViewController.swift */,
-				2290684C1C74C2570081A4CD /* Main.storyboard */,
-				223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */,
-				2290684F1C74C2570081A4CD /* Assets.xcassets */,
-				229068541C74C2570081A4CD /* Info.plist */,
-				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
-				223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */,
-				223DB4351C75F00A005AC2EC /* MorningViewController.swift */,
-				223DB4371C761087005AC2EC /* LunchViewController.swift */,
-				223DB43D1C761196005AC2EC /* DinnerViewController.swift */,
+				7A16928A1C76223D0092F933 /* Classes */,
+				7A1692881C7622010092F933 /* Resources */,
+				7A1692891C7622180092F933 /* Storyboards */,
 			);
 			path = Original;
 			sourceTree = "<group>";
@@ -125,8 +121,8 @@
 		2290685C1C74C2570081A4CD /* OriginalTests */ = {
 			isa = PBXGroup;
 			children = (
-				2290685D1C74C2570081A4CD /* OriginalTests.swift */,
 				2290685F1C74C2570081A4CD /* Info.plist */,
+				2290685D1C74C2570081A4CD /* OriginalTests.swift */,
 			);
 			path = OriginalTests;
 			sourceTree = "<group>";
@@ -134,10 +130,68 @@
 		229068671C74C2570081A4CD /* OriginalUITests */ = {
 			isa = PBXGroup;
 			children = (
-				229068681C74C2570081A4CD /* OriginalUITests.swift */,
 				2290686A1C74C2570081A4CD /* Info.plist */,
+				229068681C74C2570081A4CD /* OriginalUITests.swift */,
 			);
 			path = OriginalUITests;
+			sourceTree = "<group>";
+		};
+		7A1692881C7622010092F933 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A1692991C7626ED0092F933 /* Images */,
+				2290684F1C74C2570081A4CD /* Assets.xcassets */,
+				229068541C74C2570081A4CD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A1692891C7622180092F933 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */,
+				2290684C1C74C2570081A4CD /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7A16928A1C76223D0092F933 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A16928B1C7622430092F933 /* Controllers */,
+				7A1692961C7626A60092F933 /* Managers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7A16928B1C7622430092F933 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				229068481C74C2570081A4CD /* AppDelegate.swift */,
+				223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */,
+				223DB43D1C761196005AC2EC /* DinnerViewController.swift */,
+				223DB4371C761087005AC2EC /* LunchViewController.swift */,
+				223DB4351C75F00A005AC2EC /* MorningViewController.swift */,
+				2290684A1C74C2570081A4CD /* ViewController.swift */,
+				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7A1692961C7626A60092F933 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7A1692971C7626B90092F933 /* ColorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7A1692991C7626ED0092F933 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7A16929A1C7627470092F933 /* lit-icon@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +304,7 @@
 				223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */,
 				229068501C74C2570081A4CD /* Assets.xcassets in Resources */,
 				2290684E1C74C2570081A4CD /* Main.storyboard in Resources */,
+				7A16929B1C7627470092F933 /* lit-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +336,7 @@
 				223DB43E1C761196005AC2EC /* DinnerViewController.swift in Sources */,
 				223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
+				7A1692981C7626B90092F933 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +378,7 @@
 				2290684D1C74C2570081A4CD /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Original/Info.plist;
+				INFOPLIST_FILE = Original/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Honami.Original;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Original/Info.plist;
+				INFOPLIST_FILE = Original/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Honami.Original;
 				PRODUCT_NAME = "$(TARGET_NAME)";
