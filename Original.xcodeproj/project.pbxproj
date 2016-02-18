@@ -158,8 +158,8 @@
 		7A16928A1C76223D0092F933 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7A1692961C7626A60092F933 /* Managers */,
 				7A16928B1C7622430092F933 /* Controllers */,
+				7A1692961C7626A60092F933 /* Managers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			children = (
 				7A1692971C7626B90092F933 /* ColorManager.swift */,
 			);
-			name = Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		7A1692991C7626ED0092F933 /* Images */ = {
@@ -191,7 +191,7 @@
 			children = (
 				7A16929A1C7627470092F933 /* lit-icon@2x.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
