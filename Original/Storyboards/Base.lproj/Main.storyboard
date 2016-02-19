@@ -10,15 +10,15 @@
             <objects>
                 <viewController id="7NO-2c-HF3" customClass="OverViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSa-Rs-Glg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nmK-QF-2Mk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lit-icon.png" id="nmK-QF-2Mk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1YT-qC-bnm">
-                                <rect key="frame" x="201" y="478" width="60" height="30"/>
+                                <rect key="frame" x="195" y="475" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ログイン"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PhB-vo-O44">
-                                <rect key="frame" x="65" y="478" width="89" height="30"/>
+                                <rect key="frame" x="59" y="475" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="新規登録"/>
                                 <connections>
@@ -34,17 +34,16 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" id="JrJ-jW-Rnn">
-                                <rect key="frame" x="108" y="284" width="159" height="37"/>
+                                <rect key="frame" x="81" y="280" width="159" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuu-Ef-pnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-283.5" y="310.5"/>
+            <point key="canvasLocation" x="-284" y="310"/>
         </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="CMO-yf-kgH">
@@ -93,7 +92,7 @@
             <objects>
                 <viewController id="ylO-x9-nFI" customClass="RegistrationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBV-Rb-HRC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Bk9-vp-rVt">
@@ -227,7 +226,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lxC-kZ-LqP"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Km-xx-IbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +236,7 @@
             <objects>
                 <viewController id="MHT-R2-J1W" customClass="InviteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zax-c4-Toe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LNZ-du-Ewg">
@@ -292,7 +290,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3Q-aX-eH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1141,9 +1138,12 @@
             <point key="canvasLocation" x="96.5" y="-482.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lit-icon.png" width="60" height="60"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ctu-mA-Duk"/>
+        <segue reference="5fu-mK-JKj"/>
         <segue reference="ZQY-7S-lPv"/>
-        <segue reference="boX-7o-DgL"/>
-        <segue reference="NoJ-Rd-6xK"/>
     </inferredMetricsTieBreakers>
 </document>
