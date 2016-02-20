@@ -219,6 +219,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Juv-50-OEF" id="kIY-5P-3h6"/>
+                        <outlet property="secondPasswordTextField" destination="0Tv-tq-RrU" id="Q4t-Tk-u6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Km-xx-IbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

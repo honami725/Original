@@ -9,11 +9,20 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    
+    @IBOutlet var passwordTextField : UITextField!
+    @IBOutlet var secondPasswordTextField : UITextField!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        passwordTextField.secureTextEntry = true
+        secondPasswordTextField.secureTextEntry = true
+
+        
     }
 
     override func didReceiveMemoryWarning() {
