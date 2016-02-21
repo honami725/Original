@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB42F1C758AA3005AC2EC /* WeightViewController.swift */; };
-		223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */; };
-		223DB4361C75F00A005AC2EC /* MorningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4351C75F00A005AC2EC /* MorningViewController.swift */; };
-		223DB4381C761087005AC2EC /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB4371C761087005AC2EC /* LunchViewController.swift */; };
 		223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */; };
-		223DB43E1C761196005AC2EC /* DinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB43D1C761196005AC2EC /* DinnerViewController.swift */; };
 		229068491C74C2570081A4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068481C74C2570081A4CD /* AppDelegate.swift */; };
 		2290684B1C74C2570081A4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290684A1C74C2570081A4CD /* ViewController.swift */; };
 		2290684E1C74C2570081A4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290684C1C74C2570081A4CD /* Main.storyboard */; };
@@ -22,14 +18,6 @@
 		22A383A21C777AC200EAA5DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A3839F1C777AC200EAA5DE /* Default-568h@2x.png */; };
 		22A383A31C777AC200EAA5DE /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A383A01C777AC200EAA5DE /* Default-667h@2x.png */; };
 		22A383A41C777AC200EAA5DE /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A383A11C777AC200EAA5DE /* Default-736h@3x.png */; };
-		22A383A61C77806D00EAA5DE /* OverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383A51C77806D00EAA5DE /* OverViewController.swift */; };
-		22A383A81C7791D200EAA5DE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383A71C7791D200EAA5DE /* RegistrationViewController.swift */; };
-		22A383AA1C77955300EAA5DE /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383A91C77955300EAA5DE /* InviteViewController.swift */; };
-		22A383AC1C77987600EAA5DE /* UserPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383AB1C77987600EAA5DE /* UserPolicyViewController.swift */; };
-		22A383AE1C779B8700EAA5DE /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383AD1C779B8700EAA5DE /* PrivacyPolicyViewController.swift */; };
-		22A383B01C779D3300EAA5DE /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383AF1C779D3300EAA5DE /* SetUpViewController.swift */; };
-		22A383B21C779F5E00EAA5DE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383B11C779F5E00EAA5DE /* LogInViewController.swift */; };
-		22A383B41C77A26500EAA5DE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A383B31C77A26500EAA5DE /* ResultViewController.swift */; };
 		7A1692981C7626B90092F933 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1692971C7626B90092F933 /* ColorManager.swift */; };
 		7A16929B1C7627470092F933 /* lit-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A16929A1C7627470092F933 /* lit-icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -53,11 +41,7 @@
 
 /* Begin PBXFileReference section */
 		223DB42F1C758AA3005AC2EC /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
-		223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyFatViewController.swift; sourceTree = "<group>"; };
-		223DB4351C75F00A005AC2EC /* MorningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorningViewController.swift; sourceTree = "<group>"; };
-		223DB4371C761087005AC2EC /* LunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		223DB43D1C761196005AC2EC /* DinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerViewController.swift; sourceTree = "<group>"; };
 		229068451C74C2570081A4CD /* Original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068481C74C2570081A4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2290684A1C74C2570081A4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,14 +57,6 @@
 		22A3839F1C777AC200EAA5DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		22A383A01C777AC200EAA5DE /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		22A383A11C777AC200EAA5DE /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		22A383A51C77806D00EAA5DE /* OverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewController.swift; sourceTree = "<group>"; };
-		22A383A71C7791D200EAA5DE /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		22A383A91C77955300EAA5DE /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
-		22A383AB1C77987600EAA5DE /* UserPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPolicyViewController.swift; sourceTree = "<group>"; };
-		22A383AD1C779B8700EAA5DE /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
-		22A383AF1C779D3300EAA5DE /* SetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
-		22A383B11C779F5E00EAA5DE /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		22A383B31C77A26500EAA5DE /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7A1692971C7626B90092F933 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		7A16929A1C7627470092F933 /* lit-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lit-icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,20 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				229068481C74C2570081A4CD /* AppDelegate.swift */,
-				223DB4311C75AAAE005AC2EC /* BodyFatViewController.swift */,
-				223DB43D1C761196005AC2EC /* DinnerViewController.swift */,
-				223DB4371C761087005AC2EC /* LunchViewController.swift */,
-				223DB4351C75F00A005AC2EC /* MorningViewController.swift */,
 				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
-				22A383A51C77806D00EAA5DE /* OverViewController.swift */,
-				22A383A71C7791D200EAA5DE /* RegistrationViewController.swift */,
-				22A383A91C77955300EAA5DE /* InviteViewController.swift */,
-				22A383AB1C77987600EAA5DE /* UserPolicyViewController.swift */,
-				22A383AD1C779B8700EAA5DE /* PrivacyPolicyViewController.swift */,
-				22A383AF1C779D3300EAA5DE /* SetUpViewController.swift */,
-				22A383B11C779F5E00EAA5DE /* LogInViewController.swift */,
-				22A383B31C77A26500EAA5DE /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,20 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A383A61C77806D00EAA5DE /* OverViewController.swift in Sources */,
 				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
-				22A383B01C779D3300EAA5DE /* SetUpViewController.swift in Sources */,
-				22A383B41C77A26500EAA5DE /* ResultViewController.swift in Sources */,
-				223DB4361C75F00A005AC2EC /* MorningViewController.swift in Sources */,
-				22A383AA1C77955300EAA5DE /* InviteViewController.swift in Sources */,
-				22A383AE1C779B8700EAA5DE /* PrivacyPolicyViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
-				22A383A81C7791D200EAA5DE /* RegistrationViewController.swift in Sources */,
-				22A383B21C779F5E00EAA5DE /* LogInViewController.swift in Sources */,
-				223DB4381C761087005AC2EC /* LunchViewController.swift in Sources */,
-				22A383AC1C77987600EAA5DE /* UserPolicyViewController.swift in Sources */,
-				223DB43E1C761196005AC2EC /* DinnerViewController.swift in Sources */,
-				223DB4321C75AAAE005AC2EC /* BodyFatViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
 				7A1692981C7626B90092F933 /* ColorManager.swift in Sources */,
 			);

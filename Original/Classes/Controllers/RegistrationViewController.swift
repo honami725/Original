@@ -10,8 +10,10 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
     
+    //パスワード入力フィールド
     @IBOutlet var passwordTextField : UITextField!
     @IBOutlet var secondPasswordTextField : UITextField!
+    @IBOutlet var passwordMachingLabel: UILabel!
 
 
     override func viewDidLoad() {
@@ -19,6 +21,7 @@ class RegistrationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //パスワード入力
         passwordTextField.secureTextEntry = true
         secondPasswordTextField.secureTextEntry = true
 
@@ -30,6 +33,15 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func passwordMaching() {
+        if passwordTextField.text != secondPasswordTextField.text {
+            passwordMachingLabel.text = String("パスワードが一致しません")
+        }
+        
+    }
+    
+    
+    //戻るボタン
     @IBAction func goBack(sender: UIBarButtonItem){
         
         self.dismissViewControllerAnimated(true, completion: nil)
