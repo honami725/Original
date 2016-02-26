@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DB42F1C758AA3005AC2EC /* WeightViewController.swift */; };
 		223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */; };
+		223DC5481C7DF1BC00845594 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5471C7DF1BC00845594 /* ProgressViewController.swift */; };
+		223DC54A1C80384500845594 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5491C80384500845594 /* TweetViewController.swift */; };
 		229068491C74C2570081A4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068481C74C2570081A4CD /* AppDelegate.swift */; };
 		2290684B1C74C2570081A4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290684A1C74C2570081A4CD /* ViewController.swift */; };
 		2290684E1C74C2570081A4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290684C1C74C2570081A4CD /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		223DB42F1C758AA3005AC2EC /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		223DC5471C7DF1BC00845594 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		223DC5491C80384500845594 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		229068451C74C2570081A4CD /* Original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068481C74C2570081A4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2290684A1C74C2570081A4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				229068481C74C2570081A4CD /* AppDelegate.swift */,
 				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
+				223DC5471C7DF1BC00845594 /* ProgressViewController.swift */,
+				223DC5491C80384500845594 /* TweetViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,7 +345,9 @@
 			files = (
 				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
+				223DC54A1C80384500845594 /* TweetViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
+				223DC5481C7DF1BC00845594 /* ProgressViewController.swift in Sources */,
 				7A1692981C7626B90092F933 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

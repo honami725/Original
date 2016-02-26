@@ -14,8 +14,10 @@ class WeightViewController: UIViewController {
     @IBOutlet var label : UILabel!
     var number : Double = 0
     var dotNum : Int = 0
-    
+    let saveData = NSUserDefaults.standardUserDefaults()
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -158,6 +160,9 @@ class WeightViewController: UIViewController {
 
     }
 
+    @IBAction func input(){
+    saveData.setDouble(number, forKey: "weightData")
+    }
     
 
     /*
