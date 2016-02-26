@@ -1,24 +1,28 @@
 //
-//  RegistrationViewController.swift
+//  DateViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/20.
+//  Created by Honami on 2016/02/26.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class DateViewController: UIViewController {
     
-    @IBOutlet var name : UITextField!
-    @IBOutlet var error : UILabel!
     let saveData = NSUserDefaults.standardUserDefaults()
-
+    @IBOutlet var label : UILabel!
+    @IBOutlet var error : UILabel!
+    @IBOutlet var datePicker : UIDatePicker!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+
         
     }
 
@@ -27,26 +31,29 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //登録ボタン
-    @IBAction func input(){
-        if name.text == ""{
-            error.text = "ユーザー名が入力されていません"
-        }else{
-            saveData.setObject(name.text, forKey: "NAME")
-            performSegueWithIdentifier("Push", sender: nil)
+    func datePickerValueChanged (datePicker: UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy年MM月dd日"
+        
+        let dateValue = dateFormatter.stringFromDate(datePicker.date)
+        
+        label.text = dateValue
+        
+    }
 
+    @IBAction func input(){
+        if label.text == ""{
+            error.text = "正しい日付を選んでください"
+        }else{
+            saveData.setObject(label.text, forKey: "DATE")
+            performSegueWithIdentifier("Push", sender: nil)
+            
         }
     }
     
     
-    
-    
-    //キーボードをさげる
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-    
-
     /*
     // MARK: - Navigation
 
@@ -58,3 +65,5 @@ class RegistrationViewController: UIViewController {
     */
 
 }
+
+

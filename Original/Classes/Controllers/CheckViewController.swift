@@ -1,33 +1,44 @@
 //
-//  SetUpViewController.swift
+//  CheckViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/20.
+//  Created by Honami on 2016/02/26.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class SetUpViewController: UIViewController {
+class CheckViewController: UIViewController {
     
-    @IBOutlet var myNameLabel:UILabel!
-    @IBOutlet var dateLabel:UILabel!
-    let saveDate = NSUserDefaults.standardUserDefaults()
-    
+    @IBOutlet var myNameLabel : UILabel!
+    @IBOutlet var weightLabel : UILabel!
+    @IBOutlet var weight2Label : UILabel!
+    @IBOutlet var dateLabel : UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //自分の名前を表示
+        
         let saveData = NSUserDefaults.standardUserDefaults()
+        
+        //自分の名前を表示
         let myName = saveData.objectForKey("NAME")
         myNameLabel.text = myName as? String
+        
+        //現在の体重を表示
+        let weight : Double = saveData.doubleForKey("WEIGHT")
+        weightLabel.text = "\(weight)"
+        
+        //目標体重を表示
+        let weight2 : Double = saveData.doubleForKey("WEIGHT2")
+        weight2Label.text = "\(weight2)"
         
         //期限を表示
         let date = saveData.objectForKey("DATE")
         dateLabel.text = date as? String
-
+        
         
     }
 
@@ -36,12 +47,6 @@ class SetUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func input(){
-            saveDate.setInteger(1, forKey: "SKIP")
-            performSegueWithIdentifier("Push", sender: nil)
-    }
-
-
 
     /*
     // MARK: - Navigation

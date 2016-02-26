@@ -1,16 +1,14 @@
 //
-//  WeightViewController.swift
+//  TargetWeightViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/18.
+//  Created by Honami on 2016/02/26.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class WeightViewController: UIViewController {
-    
-    
+class TargetWeightViewController: UIViewController {
     @IBOutlet var label : UILabel!
     @IBOutlet var error : UILabel!
     var number : Double = 0
@@ -18,7 +16,6 @@ class WeightViewController: UIViewController {
     let saveData = NSUserDefaults.standardUserDefaults()
 
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,14 +43,14 @@ class WeightViewController: UIViewController {
     
     //数字
     @IBAction func one(){
-            if dotNum == 0{
-                number = number * 10 + 1
-                label.text = "\(number)"
-            }else{
-                number = number + pow(0.1,Double(dotNum))
-                label.text = "\(number)"
-                dotNum = dotNum + 1
-            }
+        if dotNum == 0{
+            number = number * 10 + 1
+            label.text = "\(number)"
+        }else{
+            number = number + pow(0.1,Double(dotNum))
+            label.text = "\(number)"
+            dotNum = dotNum + 1
+        }
     }
     
     @IBAction func two(){
@@ -88,7 +85,7 @@ class WeightViewController: UIViewController {
             dotNum = dotNum + 4
         }
     }
-
+    
     
     @IBAction func five(){
         if dotNum == 0{
@@ -111,7 +108,7 @@ class WeightViewController: UIViewController {
             dotNum = dotNum + 6
         }
     }
-
+    
     
     @IBAction func seven(){
         if dotNum == 0{
@@ -146,32 +143,33 @@ class WeightViewController: UIViewController {
             dotNum = dotNum + 9
         }
     }
-
-
+    
+    
     
     
     @IBAction func zero(){
-            if dotNum == 0{
-                number = number * 10
-                label.text = "\(number)"
-            }else{
-                dotNum = dotNum + 1
-                print("\(dotNum)")
-            }
-
+        if dotNum == 0{
+            number = number * 10
+            label.text = "\(number)"
+        }else{
+            dotNum = dotNum + 1
+            print("\(dotNum)")
+        }
+        
     }
-
     
     //登録ボタン
     @IBAction func input(){
         if number == 0.0{
             error.text = "正しい数値を入力してください"
         }else{
-            saveData.setDouble(number, forKey: "WEIGHT")
+            saveData.setDouble(number, forKey: "WEIGHT2")
             performSegueWithIdentifier("Push", sender: nil)
             
         }
     }
+    
+
     
 
     /*

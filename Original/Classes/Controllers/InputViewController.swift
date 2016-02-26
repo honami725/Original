@@ -1,27 +1,30 @@
+
 //
-//  WeightViewController.swift
+//  InputViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/18.
+//  Created by Honami on 2016/02/26.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class BodyFatViewController: UIViewController {
-    
+class InputViewController: UIViewController {
     
     @IBOutlet var label : UILabel!
+    @IBOutlet var error : UILabel!
     var number : Double = 0
     var dotNum : Int = 0
+    let saveData = NSUserDefaults.standardUserDefaults()
     
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -158,16 +161,26 @@ class BodyFatViewController: UIViewController {
         
     }
     
-    
-    
+    //登録ボタン
+    @IBAction func input(){
+        if number == 0.0{
+            error.text = "正しい数値を入力してください"
+        }else{
+            saveData.setDouble(number, forKey: "weightData")
+            performSegueWithIdentifier("Push", sender: nil)
+            
+        }
+    }
+
+
     /*
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

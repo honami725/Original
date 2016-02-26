@@ -11,6 +11,15 @@
 		223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */; };
 		223DC5481C7DF1BC00845594 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5471C7DF1BC00845594 /* ProgressViewController.swift */; };
 		223DC54A1C80384500845594 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5491C80384500845594 /* TweetViewController.swift */; };
+		223DC54C1C804F8F00845594 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC54B1C804F8F00845594 /* RegistrationViewController.swift */; };
+		223DC54E1C80519200845594 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC54D1C80519200845594 /* SetUpViewController.swift */; };
+		223DC5541C80586400845594 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5531C80586400845594 /* InviteViewController.swift */; };
+		223DC5561C80627100845594 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5551C80627100845594 /* InputViewController.swift */; };
+		223DC5581C80635600845594 /* TargetWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5571C80635600845594 /* TargetWeightViewController.swift */; };
+		223DC55A1C80668900845594 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC5591C80668900845594 /* CheckViewController.swift */; };
+		223DC55C1C80687D00845594 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC55B1C80687D00845594 /* ProfileViewController.swift */; };
+		223DC55E1C806C0500845594 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC55D1C806C0500845594 /* DateViewController.swift */; };
+		223DC5601C80A0E000845594 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DC55F1C80A0E000845594 /* StartViewController.swift */; };
 		229068491C74C2570081A4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068481C74C2570081A4CD /* AppDelegate.swift */; };
 		2290684B1C74C2570081A4CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290684A1C74C2570081A4CD /* ViewController.swift */; };
 		2290684E1C74C2570081A4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290684C1C74C2570081A4CD /* Main.storyboard */; };
@@ -46,6 +55,15 @@
 		223DB43A1C7610CA005AC2EC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		223DC5471C7DF1BC00845594 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		223DC5491C80384500845594 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		223DC54B1C804F8F00845594 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		223DC54D1C80519200845594 /* SetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		223DC5531C80586400845594 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		223DC5551C80627100845594 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		223DC5571C80635600845594 /* TargetWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetWeightViewController.swift; sourceTree = "<group>"; };
+		223DC5591C80668900845594 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		223DC55B1C80687D00845594 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		223DC55D1C806C0500845594 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		223DC55F1C80A0E000845594 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		229068451C74C2570081A4CD /* Original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068481C74C2570081A4CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2290684A1C74C2570081A4CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,10 +198,19 @@
 			isa = PBXGroup;
 			children = (
 				229068481C74C2570081A4CD /* AppDelegate.swift */,
-				2290684A1C74C2570081A4CD /* ViewController.swift */,
+				223DC55F1C80A0E000845594 /* StartViewController.swift */,
+				223DC54B1C804F8F00845594 /* RegistrationViewController.swift */,
 				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
+				223DC5571C80635600845594 /* TargetWeightViewController.swift */,
+				223DC55D1C806C0500845594 /* DateViewController.swift */,
+				223DC5591C80668900845594 /* CheckViewController.swift */,
+				223DC5531C80586400845594 /* InviteViewController.swift */,
+				223DC54D1C80519200845594 /* SetUpViewController.swift */,
+				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				223DC5471C7DF1BC00845594 /* ProgressViewController.swift */,
 				223DC5491C80384500845594 /* TweetViewController.swift */,
+				223DC5551C80627100845594 /* InputViewController.swift */,
+				223DC55B1C80687D00845594 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,11 +370,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223DC5541C80586400845594 /* InviteViewController.swift in Sources */,
+				223DC5561C80627100845594 /* InputViewController.swift in Sources */,
+				223DC55E1C806C0500845594 /* DateViewController.swift in Sources */,
 				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
+				223DC5601C80A0E000845594 /* StartViewController.swift in Sources */,
 				223DC54A1C80384500845594 /* TweetViewController.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
+				223DC54E1C80519200845594 /* SetUpViewController.swift in Sources */,
+				223DC54C1C804F8F00845594 /* RegistrationViewController.swift in Sources */,
 				223DC5481C7DF1BC00845594 /* ProgressViewController.swift in Sources */,
+				223DC55A1C80668900845594 /* CheckViewController.swift in Sources */,
+				223DC55C1C80687D00845594 /* ProfileViewController.swift in Sources */,
+				223DC5581C80635600845594 /* TargetWeightViewController.swift in Sources */,
 				7A1692981C7626B90092F933 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,9 +519,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Original/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Honami.Original;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -495,9 +533,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Original/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Honami.Original;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,32 +1,41 @@
 //
-//  LogInViewController.swift
+//  StartViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/20.
+//  Created by Honami on 2016/02/27.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class StartViewController: UIViewController {
+    
+    @IBOutlet var label : UILabel!
+    let saveDate = NSUserDefaults.standardUserDefaults()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func goBack(sender: UIButton){
         
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
+    @IBAction func input(){
+        if saveDate.arrayForKey("SKIP") != nil{
+            performSegueWithIdentifier("Push", sender: nil)
+        }else{
+            performSegueWithIdentifier("Skip", sender: nil)
 
+        }
+    }
     /*
     // MARK: - Navigation
 

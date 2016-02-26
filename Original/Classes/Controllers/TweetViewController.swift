@@ -10,12 +10,19 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
+    var tweetArray: [AnyObject] = []
+    let saveData = NSUserDefaults.standardUserDefaults()
     @IBOutlet var textField : UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if saveData.arrayForKey("tweet") != nil{
+            tweetArray = saveData.arrayForKey("tweet")!
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +31,7 @@ class TweetViewController: UIViewController {
     }
     
     @IBAction func tweetButton(){
-        let saveData = NSUserDefaults.standardUserDefaults()
-        saveData.setObject(textField.text, forKey: "tweet")
+        saveData.setObject(tweetArray, forKey:"tweet")
 
         
     }
