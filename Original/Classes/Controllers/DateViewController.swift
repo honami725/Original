@@ -45,7 +45,7 @@ class DateViewController: UIViewController {
 
     @IBAction func input(){
         if label.text == ""{
-            error.text = "正しい日付を選んでください"
+            error.text = "正しい日付を選んでください!"
         }else{
             saveData.setObject(label.text, forKey: "DATE")
             performSegueWithIdentifier("Push", sender: nil)

@@ -42,7 +42,9 @@ class WeightViewController: UIViewController {
         number = 0
         dotNum = 0
         label.text = "\(number)"
+        error.text = ""
     }
+    
     
     //数字
     @IBAction func one(){
@@ -164,8 +166,8 @@ class WeightViewController: UIViewController {
     
     //登録ボタン
     @IBAction func input(){
-        if number == 0.0{
-            error.text = "正しい数値を入力してください"
+        if number == 0.0 || number >= 200.0{
+            error.text = "正しい数値を入力してください!"
         }else{
             saveData.setDouble(number, forKey: "WEIGHT")
             performSegueWithIdentifier("Push", sender: nil)

@@ -29,12 +29,15 @@ class StartViewController: UIViewController {
     
         
     @IBAction func input(){
-        if saveDate.arrayForKey("SKIP") != nil{
-            performSegueWithIdentifier("Push", sender: nil)
-        }else{
-            performSegueWithIdentifier("Skip", sender: nil)
-
-        }
+        performSegueWithIdentifier( "Push", sender: nil)
+        
+        
+//        if saveDate.arrayForKey("SKIP") != nil{
+//            performSegueWithIdentifier("Push", sender: nil)
+//        }else{
+//            performSegueWithIdentifier("Skip", sender: nil)
+//
+//        }
     }
     /*
     // MARK: - Navigation
