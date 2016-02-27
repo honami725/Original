@@ -460,7 +460,6 @@
                                 <state key="normal" title="入力完了"/>
                                 <connections>
                                     <action selector="input" destination="L6C-WC-6nZ" eventType="touchUpInside" id="cJn-u1-MeH"/>
-                                    <segue destination="R1H-Dc-hbN" kind="push" id="sOk-hd-7Tj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cNA-zS-0wr">
@@ -486,6 +485,7 @@
                     <connections>
                         <outlet property="error" destination="kie-FY-0R3" id="Woy-Af-KDg"/>
                         <outlet property="label" destination="cNA-zS-0wr" id="XoC-ti-ifM"/>
+                        <segue destination="R1H-Dc-hbN" kind="push" identifier="Push" id="2Pi-68-ieA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wM-KZ-auv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,6 +528,10 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="d0i-Ph-Q53" appends="YES" id="EbA-Ac-Dun"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Z7x-VO-3vd"/>
                     <connections>
@@ -535,6 +539,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqt-29-fa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d0i-Ph-Q53">
+                    <connections>
+                        <action selector="tapScreen:" destination="R1H-Dc-hbN" id="Pox-mJ-5Dn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3102" y="3231"/>
         </scene>

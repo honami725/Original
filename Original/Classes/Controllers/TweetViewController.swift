@@ -10,7 +10,6 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
-    var tweetArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
     @IBOutlet var textField : UITextField!
 
@@ -18,11 +17,6 @@ class TweetViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if saveData.arrayForKey("tweet") != nil{
-            tweetArray = saveData.arrayForKey("tweet")!
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,9 +25,14 @@ class TweetViewController: UIViewController {
     }
     
     @IBAction func tweetButton(){
-        saveData.setObject(tweetArray, forKey:"tweet")
+        saveData.setObject(textField.text, forKey:"tweet")
 
         
+    }
+    
+    //キーボードをさげる
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
 

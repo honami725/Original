@@ -12,8 +12,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet var tableView : UITableView!
     @IBOutlet var myNameLabel : UILabel!
-    let saveData = NSUserDefaults.standardUserDefaults()
-    var tweetArray : AnyObject = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +23,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
 
         
-        
+        let saveData = NSUserDefaults.standardUserDefaults()
         
         //自分の名前を表示
         let myName = saveData.objectForKey("NAME")
         myNameLabel.text = myName as? String
         
-        
+
 
     }
 
@@ -40,23 +38,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if saveData.arrayForKey("tweet") != nil{
-            tweetArray = saveData.arrayForKey("tweet")!
-        }
-        tableView.reloadData()
-    }
-    
-    
     //TableView設定
     // セルに表示するテキスト
     //let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweetArray.count
+        return 1
     }
     
     // セルの内容を変更
