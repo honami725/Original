@@ -1,37 +1,26 @@
 //
-//  SetUpViewController.swift
+//  InvitedViewController.swift
 //  Original
 //
-//  Created by Honami on 2016/02/20.
+//  Created by Honami on 2016/02/28.
 //  Copyright © 2016年 Honami. All rights reserved.
 //
 
 import UIKit
 
-class SetUpViewController: UIViewController {
+class InvitedViewController: UIViewController,UITextFieldDelegate {
+
+    @IBOutlet var textField : UITextField!
     
-    @IBOutlet var myNameLabel:UILabel!
-    @IBOutlet var dateLabel:UILabel!
-    let saveDate = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        self.textField.delegate = self
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        //自分の名前を表示
-        let saveData = NSUserDefaults.standardUserDefaults()
-        let myName = saveData.objectForKey("NAME")
-        myNameLabel.text = myName as? String
-        
-        //期限を表示
-        let date = saveData.objectForKey("DATE")
-        dateLabel.text = date as? String
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,13 +28,18 @@ class SetUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func input(){
-            saveDate.setInteger(1, forKey: "SKIP")
-            performSegueWithIdentifier("Push", sender: nil)
+
+    //enter押したらキーボードが下がる
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
-
-
-
+    
+    //画面をタップしたらキーボードが下がる
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 

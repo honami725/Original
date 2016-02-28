@@ -21,6 +21,9 @@ class DateViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
 
         

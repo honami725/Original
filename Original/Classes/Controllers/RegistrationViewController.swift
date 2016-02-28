@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var name : UITextField!
     @IBOutlet var error : UILabel!
@@ -19,6 +19,10 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.name.delegate = self
         
     }
 
@@ -39,9 +43,15 @@ class RegistrationViewController: UIViewController {
     }
     
     
+    // enter押すとキーボードをさげる
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     
-    //キーボードをさげる
+    
+    //画面をタップするとキーボードをさげる
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

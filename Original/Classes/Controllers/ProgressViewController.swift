@@ -21,6 +21,9 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         //TableView
         tableView.delegate = self
         tableView.dataSource = self

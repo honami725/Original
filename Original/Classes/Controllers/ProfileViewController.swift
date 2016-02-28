@@ -18,6 +18,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // Do any additional setup after loading the view.
         
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         //TableView
         tableView.delegate = self
         tableView.dataSource = self

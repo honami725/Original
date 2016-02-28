@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetViewController: UIViewController {
+class TweetViewController: UIViewController, UITextFieldDelegate {
     
     let saveData = NSUserDefaults.standardUserDefaults()
     @IBOutlet var textField : UITextField!
@@ -17,6 +17,10 @@ class TweetViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.textField.delegate = self
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +34,14 @@ class TweetViewController: UIViewController {
         
     }
     
-    //キーボードをさげる
+    //enter押すとキーボードをさげる
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
+    //画面をタップしたらキーボードをさげる
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

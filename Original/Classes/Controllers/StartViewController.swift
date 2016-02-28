@@ -10,17 +10,31 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    @IBOutlet var label : UILabel!
-    let saveDate = NSUserDefaults.standardUserDefaults()
-    
-    
 
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
         
+
+        
+        //Navigationbar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.navigationBar.barTintColor = UIColorFromRGB(0x7b4490)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        
+    }
+            
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,7 +43,7 @@ class StartViewController: UIViewController {
     
         
     @IBAction func input(){
-        performSegueWithIdentifier( "Push", sender: nil)
+        performSegueWithIdentifier("Push", sender: nil)
         
         
 //        if saveDate.arrayForKey("SKIP") != nil{

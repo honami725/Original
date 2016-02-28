@@ -20,6 +20,9 @@ class CheckViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         
         let saveData = NSUserDefaults.standardUserDefaults()
         
