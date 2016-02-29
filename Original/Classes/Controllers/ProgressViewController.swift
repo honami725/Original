@@ -21,6 +21,10 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+        
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
@@ -42,6 +46,14 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         let weight2 : Double = saveData.doubleForKey("WEIGHT2")
         weight2Label.text = "\(weight2)"
 
+        
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         
     }
     

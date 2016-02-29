@@ -25,7 +25,19 @@ class DateViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
 
+
+        
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         
     }
 

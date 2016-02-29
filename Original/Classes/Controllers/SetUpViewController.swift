@@ -19,6 +19,10 @@ class SetUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+        
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
@@ -31,6 +35,14 @@ class SetUpViewController: UIViewController {
         let date = saveData.objectForKey("DATE")
         dateLabel.text = date as? String
 
+        
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         
     }
 

@@ -16,6 +16,9 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
     
         //TabBar
         
@@ -42,11 +45,22 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
         let myName = saveData.objectForKey("NAME")
         myNameLabel.text = myName as? String
     }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
     
 

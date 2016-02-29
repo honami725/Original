@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CheckViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class CheckViewController: UIViewController {
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     @IBOutlet var dateLabel : UILabel!
+    let saveData = NSUserDefaults.standardUserDefaults()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,9 @@ class CheckViewController: UIViewController {
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-        
-        let saveData = NSUserDefaults.standardUserDefaults()
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
         
         //自分の名前を表示
         let myName = saveData.objectForKey("NAME")
@@ -33,6 +37,9 @@ class CheckViewController: UIViewController {
         //現在の体重を表示
         let weight : Double = saveData.doubleForKey("WEIGHT")
         weightLabel.text = "\(weight)"
+        
+
+        
         
         //目標体重を表示
         let weight2 : Double = saveData.doubleForKey("WEIGHT2")
@@ -44,11 +51,42 @@ class CheckViewController: UIViewController {
         
         
     }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //登録ボタン
+    @IBAction func input(){
+       self.create()
+    }
+    
+    
+        
+    
+    //生成
+    func create() {
+        let doubleWeight : Double = saveData.doubleForKey("WEIGHT")
+        let doubleWeight2 : Double = saveData.doubleForKey("WEIGHT2")
+    
+        
+        let object: Data = Data()
+        object["Name"] = myNameLabel.text
+        object["Weight"] = doubleWeight
+        object["Weight2"] = doubleWeight2
+        object["Date"] = dateLabel.text
+        object.saveInBackground()
+    }
+
     
 
     /*

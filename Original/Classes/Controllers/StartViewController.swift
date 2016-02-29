@@ -10,6 +10,7 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    
 
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
@@ -32,16 +33,25 @@ class StartViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColorFromRGB(0x7b4490)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-    }
-            
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        // trueの場合はステータスバー非表示
+        return false;
+    }
+
+    
     @IBAction func input(){
         performSegueWithIdentifier("Push", sender: nil)
         

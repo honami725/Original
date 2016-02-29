@@ -20,9 +20,22 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
+        
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.name.delegate = self
+        
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+        
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
         
     }
 
@@ -41,6 +54,9 @@ class RegistrationViewController: UIViewController,UITextFieldDelegate {
 
         }
     }
+    
+    
+    
     
     
     // enter押すとキーボードをさげる

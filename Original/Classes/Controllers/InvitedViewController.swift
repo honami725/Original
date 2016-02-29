@@ -21,6 +21,18 @@ class InvitedViewController: UIViewController,UITextFieldDelegate {
         self.textField.delegate = self
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +46,8 @@ class InvitedViewController: UIViewController,UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    
     
     //画面をタップしたらキーボードが下がる
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {

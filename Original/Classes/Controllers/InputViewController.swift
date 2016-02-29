@@ -22,10 +22,23 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
         // Do any additional setup after loading the view.
+        
+        //ステータスバー
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+
         
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    //ステータスバーを白くする
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        
     }
 
     override func didReceiveMemoryWarning() {
