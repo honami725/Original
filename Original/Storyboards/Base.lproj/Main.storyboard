@@ -66,6 +66,11 @@
             <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -104,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eL-OI-WiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="941"/>
+            <point key="canvasLocation" x="311" y="941"/>
         </scene>
         <!--Invited View Controller-->
         <scene sceneID="utr-qE-1a2">
@@ -166,7 +171,91 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="335" y="1659"/>
+            <point key="canvasLocation" x="311" y="1661"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wWe-nP-H1P">
+            <objects>
+                <viewController id="VFf-0l-s9N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTt-pJ-f6j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="Ybc-Xp-pmf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" id="jZd-l4-fDL">
+                                <rect key="frame" x="60" y="91" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="と言うことができるのは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="48T-Tl-EPu">
+                                <rect key="frame" x="47" y="276" width="227" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どっち！？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VuY-Mk-tBz">
+                                <rect key="frame" x="108" y="313" width="104" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H6N-5w-KLd">
+                                <rect key="frame" x="53" y="368" width="214" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="button3.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFi-Lr-5qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="2514"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Mr-pW-ORa">
+            <objects>
+                <viewController id="GYH-mi-got" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ZP-mo-W0N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back11.png" id="UH9-5P-oUf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECH-eZ-iBW">
+                                <rect key="frame" x="86" y="309" width="145" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="23"/>
+                                <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hq3-kU-EHV">
+                                <rect key="frame" x="28" y="396" width="90" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日間お疲れ様でした！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7al-XX-K8f">
+                                <rect key="frame" x="119" y="396" width="170" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVE-Kd-A1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="2514"/>
         </scene>
         <!--経過-->
         <scene sceneID="5uh-HU-kEb">
@@ -417,7 +506,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He3-M8-sCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="1743"/>
+            <point key="canvasLocation" x="3102" y="1741"/>
         </scene>
         <!--入力-->
         <scene sceneID="4E0-GP-Gv0">
@@ -938,7 +1027,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn7-ha-96N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="941"/>
+            <point key="canvasLocation" x="1092" y="941"/>
         </scene>
         <!--Target Weight View Controller-->
         <scene sceneID="YgR-av-H1P">
@@ -1123,7 +1212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNn-fg-5mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485" y="941"/>
+            <point key="canvasLocation" x="1503" y="941"/>
         </scene>
         <!--Date View Controller-->
         <scene sceneID="LyK-f8-WMu">
@@ -1192,7 +1281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlQ-QL-KHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="941"/>
+            <point key="canvasLocation" x="1910" y="941"/>
         </scene>
         <!--確認-->
         <scene sceneID="ILM-bv-b5h">
@@ -1302,6 +1391,9 @@
                                 <rect key="frame" x="50" y="270" width="221" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="招待する" image="button2.png"/>
+                                <connections>
+                                    <action selector="shere:" destination="hKX-cP-sRe" eventType="touchUpInside" id="qz0-hF-frA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vg5-O4-igp">
                                 <rect key="frame" x="88" y="394" width="150" height="65"/>
@@ -1387,12 +1479,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ox0-8R-N4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="941"/>
+            <point key="canvasLocation" x="3118" y="941"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k1w-nO-oS0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xl5-5m-c8X" customClass="NavigationController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xl5-5m-c8X" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Mlr-6N-GyF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wag-hD-uR9">
@@ -1406,7 +1498,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2K-5e-lNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-570" y="941"/>
+            <point key="canvasLocation" x="-492" y="941"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="j2E-sq-9XE">
@@ -1443,7 +1535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzd-bk-uWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143" y="941"/>
+            <point key="canvasLocation" x="-87" y="941"/>
         </scene>
     </scenes>
     <resources>
@@ -1463,6 +1555,7 @@
         <image name="back.png" width="1280" height="2272"/>
         <image name="back1.png" width="1280" height="2272"/>
         <image name="back10.png" width="1280" height="2272"/>
+        <image name="back11.png" width="1280" height="2272"/>
         <image name="back2.png" width="1280" height="2272"/>
         <image name="back3.png" width="1280" height="2272"/>
         <image name="back4.png" width="1280" height="2272"/>
@@ -1473,6 +1566,7 @@
         <image name="back9.png" width="1280" height="2272"/>
         <image name="button.png" width="1000" height="350"/>
         <image name="button2.png" width="800" height="350"/>
+        <image name="button3.png" width="800" height="350"/>
         <image name="dot.png" width="300" height="300"/>
         <image name="entry.png" width="800" height="350"/>
         <image name="icon1.png" width="24" height="24"/>
@@ -1483,7 +1577,7 @@
         <image name="logo.png" width="1500" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TR5-t4-8QV"/>
         <segue reference="brw-fs-TIH"/>
+        <segue reference="0mc-Et-cGa"/>
     </inferredMetricsTieBreakers>
 </document>

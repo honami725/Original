@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Accounts
 
 class InviteViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,33 @@ class InviteViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func shere(sender:UIButton){
+        // ShareExtensionに渡すURLの用意
+        // 共有する項目
+        let shareText = "Apple - Apple Watch"
+        let shareWebsite = NSURL(string: "https://www.apple.com/jp/watch/")!
+        let shareImage = UIImage(named: "1.png")!
+        
+        let activityItems = [shareText, shareWebsite, shareImage]
+        
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivityTypePostToWeibo,
+            UIActivityTypeSaveToCameraRoll,
+            UIActivityTypePrint
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        self.presentViewController(activityVC, animated: true, completion: nil)
+    
+    }
+    
     
 
     /*
