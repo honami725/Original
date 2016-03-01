@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController, UITabBarControllerDelegate {
     
 
     @IBOutlet var myNameLabel : UILabel!
+    @IBOutlet var dateLabel :UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +43,28 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
 
         
         //自分の名前を表示
-        let saveData = NSUserDefaults.standardUserDefaults()
-        let myName = saveData.objectForKey("NAME")
-        myNameLabel.text = myName as? String
+        myNameLabel.text = PFUser.currentUser()!.username! as String
+        
+        
+        //残り何日表示
+        let dateData = PFUser.currentUser()!.objectForKey("Date") as! String
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy年MM月dd日"
+        //現在日時の取得
+        let now = NSDate()
+        let nowDate = dateFormatter.stringFromDate(now)
+        //二つの日時の計算
+        let startDate:NSDate? = dateFormatter.dateFromString(nowDate)
+        let endDate:NSDate? = dateFormatter.dateFromString(dateData)
+        let cal = NSCalendar.currentCalendar()
+        let calUnit = NSCalendarUnit.Day
+        let components = cal.components(calUnit, fromDate: startDate!, toDate: endDate!, options: NSCalendarOptions())
+        //表示
+        dateLabel.text = String(components.day)
+        
+        
+        
     }
     
     //ステータスバーを白くする

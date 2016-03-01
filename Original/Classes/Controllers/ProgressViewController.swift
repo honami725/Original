@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProgressViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -31,20 +32,19 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         //TableView
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let saveData = NSUserDefaults.standardUserDefaults()
+    
+        //let saveData = NSUserDefaults.standardUserDefaults()
 
         //自分の名前を表示
-        let myName = saveData.objectForKey("NAME")
-        myNameLabel.text = myName as? String
+        myNameLabel.text = PFUser.currentUser()!.username! as String
         
         //現在の体重を表示
-        let firstWeight : Double = saveData.doubleForKey("WEIGHT")
+        let firstWeight : Double = PFUser.currentUser()!.objectForKey("Weight") as! Double
         weightLabel.text = "\(firstWeight)"
         
         //目標体重を表示
-        let weight2 : Double = saveData.doubleForKey("WEIGHT2")
-        weight2Label.text = "\(weight2)"
+        let Weight2 : Double = PFUser.currentUser()!.objectForKey("Weight2") as! Double
+        weight2Label.text = "\(Weight2)"
 
         
     }

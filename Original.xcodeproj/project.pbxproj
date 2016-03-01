@@ -440,8 +440,8 @@
 				223DC54D1C80519200845594 /* SetUpViewController.swift */,
 				2290684A1C74C2570081A4CD /* ViewController.swift */,
 				223DC5471C7DF1BC00845594 /* ProgressViewController.swift */,
-				223DC5491C80384500845594 /* TweetViewController.swift */,
 				223DC5551C80627100845594 /* InputViewController.swift */,
+				223DC5491C80384500845594 /* TweetViewController.swift */,
 				223DC55B1C80687D00845594 /* ProfileViewController.swift */,
 			);
 			path = Controllers;

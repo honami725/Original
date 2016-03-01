@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -30,13 +31,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
 
         
-        let saveData = NSUserDefaults.standardUserDefaults()
+        //let saveData = NSUserDefaults.standardUserDefaults()
         
         //自分の名前を表示
-        let myName = saveData.objectForKey("NAME")
-        myNameLabel.text = myName as? String
-        
-
+        myNameLabel.text = PFUser.currentUser()!.username! as String
 
     }
     

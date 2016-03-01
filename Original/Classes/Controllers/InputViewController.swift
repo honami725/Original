@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Parse
 
 class InputViewController: UIViewController {
     
@@ -183,7 +184,17 @@ class InputViewController: UIViewController {
         if number == 0.0 || number >= 200.0{
             error.text = "正しい数値を入力してください!"
         }else{
-            saveData.setDouble(number, forKey: "weightData")
+            
+            let send:PFObject = PFObject(className: "Weight")
+            
+            // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
+            send["Weight"] = number
+            send["User"] = PFUser.currentUser()
+            
+            // Parseに送信
+            send.saveInBackground()
+            
+            //saveData.setDouble(number, forKey: "weightData")
             performSegueWithIdentifier("Push", sender: nil)
             
         }

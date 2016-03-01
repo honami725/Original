@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class TweetViewController: UIViewController, UITextFieldDelegate {
     
     let saveData = NSUserDefaults.standardUserDefaults()
     @IBOutlet var textField : UITextField!
+    @IBOutlet var error : UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,24 @@ class TweetViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tweetButton(){
-        saveData.setObject(textField.text, forKey:"tweet")
+        if textField.text == ""{
+            error.text = "何も記入していません！"
+        }else{
+            
+            let send:PFObject = PFObject(className: "Tweet")
+            
+            // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
+            send["Tweet"] = textField.text
+            send["User"] = PFUser.currentUser()
+            
+            // Parseに送信
+            send.saveInBackground()
+            
+            //saveData.setDouble(number, forKey: "weightData")
+            performSegueWithIdentifier("Push", sender: nil)
+            //saveData.setObject(textField.text, forKey:"tweet")
 
-        
+        }
     }
     
     //enter押すとキーボードをさげる
