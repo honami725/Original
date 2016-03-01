@@ -21,9 +21,8 @@ class OverViewController: UIViewController, UIScrollViewDelegate {
         //ステータスバー
         UIApplication.sharedApplication().statusBarStyle = .LightContent
 
-        
-        //NavigationBarを隠す
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
 
         // UIScrollView

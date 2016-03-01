@@ -28,11 +28,26 @@
             <string>FGModernGothic</string>
             <string>FGModernGothic</string>
             <string>FGModernGothic</string>
+            <string>FGModernGothic</string>
+            <string>FGModernGothic</string>
+            <string>FGModernGothic</string>
         </mutableArray>
         <mutableArray key="mplus-1c-heavy.ttf">
             <string>mplus-1c-heavy</string>
         </mutableArray>
         <mutableArray key="nicokaku_v1.ttf">
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
@@ -109,7 +124,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eL-OI-WiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="941"/>
+            <point key="canvasLocation" x="-85" y="941"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="vgj-yf-rm9">
+            <objects>
+                <viewController id="EyU-fh-dzg" customClass="LogInViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RX8-XJ-ggv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="YzF-Fl-KwC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Qy-Fv-K40" appends="YES" id="jHj-5e-UeF"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I3n-AB-vcg">
+                                <rect key="frame" x="53" y="114" width="89" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.34593380299999998" blue="0.65103366900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NXP-He-1Cc">
+                                <rect key="frame" x="53" y="259" width="89" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="22"/>
+                                <color key="textColor" red="0.99792200330000003" green="0.94343487609999999" blue="0.51356646780000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="YFA-EG-CvM">
+                                <rect key="frame" x="40" y="144" width="240" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="qhQ-72-pBS">
+                                <rect key="frame" x="40" y="290" width="240" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VmC-bS-hnT">
+                                <rect key="frame" x="75" y="445" width="170" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="OK.png"/>
+                                <connections>
+                                    <action selector="login:" destination="EyU-fh-dzg" eventType="touchUpInside" id="uG7-w5-9hH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mfn-gf-EuT">
+                                <rect key="frame" x="16" y="392" width="288" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" id="iuN-iS-7Vq">
+                                <rect key="frame" x="75" y="174" width="170" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" id="399-SO-n0U">
+                                <rect key="frame" x="75" y="318" width="170" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gXj-mN-JZH">
+                                <rect key="frame" x="73" y="74" width="175" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eil-qe-2KE"/>
+                    <connections>
+                        <outlet property="error" destination="mfn-gf-EuT" id="f7d-m9-gYp"/>
+                        <outlet property="passwordTextField" destination="399-SO-n0U" id="bKV-5C-VKh"/>
+                        <outlet property="usernameTextField" destination="iuN-iS-7Vq" id="gdi-tl-f7u"/>
+                        <segue destination="Kib-1e-a3N" kind="push" identifier="Push" id="CgR-Zd-I3R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeV-0Z-OIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Qy-Fv-K40">
+                    <connections>
+                        <action selector="tapScreen:" destination="EyU-fh-dzg" id="r22-id-h7x"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-583" y="1637"/>
         </scene>
         <!--Invited View Controller-->
         <scene sceneID="utr-qE-1a2">
@@ -171,7 +280,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="311" y="1661"/>
+            <point key="canvasLocation" x="-85" y="2021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wWe-nP-H1P">
@@ -845,7 +954,7 @@
                     <connections>
                         <outlet property="error" destination="r9d-jV-eTD" id="e5d-pg-N0Y"/>
                         <outlet property="name" destination="YdE-Xr-jd1" id="Jt1-3f-zQb"/>
-                        <segue destination="XtS-v8-xgp" kind="push" identifier="Push" id="5GG-Eq-M1V"/>
+                        <segue destination="I1z-mJ-wxt" kind="push" identifier="Push" id="Ean-dz-snx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIp-dN-4V5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -855,7 +964,73 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="700" y="941"/>
+            <point key="canvasLocation" x="311" y="941"/>
+        </scene>
+        <!--Password View Controller-->
+        <scene sceneID="BgQ-Ad-3LJ">
+            <objects>
+                <viewController id="I1z-mJ-wxt" customClass="PasswordViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="It4-ai-BAC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3.png" id="iSJ-SR-elH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kg2-gr-24x" appends="YES" id="w2T-eJ-RpB"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKT-sh-fZU">
+                                <rect key="frame" x="9" y="109" width="303" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">パスワードを入力してください
+()</string>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" id="3hZ-R1-R9k">
+                                <rect key="frame" x="45" y="219" width="227" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="784-33-HdQ">
+                                <rect key="frame" x="85" y="381" width="150" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK" image="OK.png"/>
+                                <connections>
+                                    <action selector="input" destination="O1F-Ze-Ca6" eventType="touchUpInside" id="1sK-fb-EH6"/>
+                                    <action selector="input" destination="I1z-mJ-wxt" eventType="touchUpInside" id="UX2-eY-F3q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w1c-hf-DeF">
+                                <rect key="frame" x="30" y="323" width="261" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ouS-0Q-sfu"/>
+                    <connections>
+                        <outlet property="error" destination="w1c-hf-DeF" id="8dm-UU-vnS"/>
+                        <outlet property="pass" destination="3hZ-R1-R9k" id="FgO-7N-pPN"/>
+                        <segue destination="XtS-v8-xgp" kind="push" identifier="Push" id="0wA-gj-1e7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgo-qc-nCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kg2-gr-24x">
+                    <connections>
+                        <action selector="tapScreen:" destination="I1z-mJ-wxt" id="S40-aZ-aqo"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="702" y="941"/>
         </scene>
         <!--Weight View Controller-->
         <scene sceneID="zHd-RC-yaK">
@@ -1291,40 +1466,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back6.png" id="SCr-jj-MqS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="SCr-jj-MqS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="XN4-vQ-QF2">
+                                <rect key="frame" x="125" y="105" width="187" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="gfu-D7-Hrx">
+                                <rect key="frame" x="125" y="168" width="187" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="oQQ-Gy-cDK">
+                                <rect key="frame" x="125" y="231" width="187" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="lnC-88-erO">
+                                <rect key="frame" x="125" y="300" width="187" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame.png" id="pFr-YG-nBg">
+                                <rect key="frame" x="64" y="364" width="254" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="h4a-zb-WMH">
-                                <rect key="frame" x="154" y="124" width="136" height="36"/>
+                                <rect key="frame" x="150" y="120" width="136" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="22"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Bp-cs-O3y">
-                                <rect key="frame" x="164" y="209" width="96" height="38"/>
+                                <rect key="frame" x="156" y="246" width="96" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="20"/>
+                                <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aig-hY-P96">
+                                <rect key="frame" x="150" y="181" width="134" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="20"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fzV-qX-X78">
-                                <rect key="frame" x="262" y="219" width="26" height="28"/>
+                                <rect key="frame" x="258" y="256" width="26" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="18"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OYT-Bb-Fb8">
-                                <rect key="frame" x="164" y="293" width="96" height="43"/>
+                                <rect key="frame" x="156" y="312" width="96" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="20"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8h3-WD-mhD">
-                                <rect key="frame" x="260" y="305" width="30" height="27"/>
+                                <rect key="frame" x="256" y="324" width="30" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="18"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1353,6 +1555,41 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0vP-Sr-o1l">
+                                <rect key="frame" x="22" y="122" width="89" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.34593380301327886" blue="0.65103366897716519" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dP3-dh-6Mq">
+                                <rect key="frame" x="20" y="185" width="89" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="22"/>
+                                <color key="textColor" red="0.59362512633131992" green="0.4478964733857056" blue="0.93413460254669189" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在の体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YD3-Lw-2kt">
+                                <rect key="frame" x="20" y="251" width="96" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" red="0.99792200326919556" green="0.94343487608925969" blue="0.51356646783427973" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標の体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XG3-p1-5eP">
+                                <rect key="frame" x="20" y="319" width="96" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" red="0.50995644430223963" green="0.85882352939999995" blue="0.60348082029833672" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OJj-oA-YBu">
+                                <rect key="frame" x="22" y="385" width="45" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
+                                <color key="textColor" red="0.49341035173620162" green="0.88448491203290358" blue="0.93413460254669189" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1360,6 +1597,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="mIl-ec-1Lk" id="I7G-bR-XXc"/>
                         <outlet property="myNameLabel" destination="h4a-zb-WMH" id="8Ia-RX-0Wj"/>
+                        <outlet property="passwordLabel" destination="aig-hY-P96" id="VUC-qC-QV2"/>
                         <outlet property="weight2Label" destination="OYT-Bb-Fb8" id="pRa-c5-blV"/>
                         <outlet property="weightLabel" destination="8Bp-cs-O3y" id="eov-Qw-52G"/>
                     </connections>
@@ -1498,7 +1736,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2K-5e-lNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="941"/>
+            <point key="canvasLocation" x="-1008" y="941"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="j2E-sq-9XE">
@@ -1513,7 +1751,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9vk-ln-PAT">
-                                <rect key="frame" x="51" y="371" width="218" height="92"/>
+                                <rect key="frame" x="51" y="355" width="218" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="START" image="START.png"/>
                                 <connections>
@@ -1524,18 +1762,25 @@
                                 <rect key="frame" x="49" y="105" width="222" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Mx-py-4R5">
+                                <rect key="frame" x="68" y="450" width="184" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="login.png"/>
+                                <connections>
+                                    <segue destination="EyU-fh-dzg" kind="push" id="0MA-gp-wCY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jt3-ss-JVc"/>
                     <connections>
-                        <segue destination="Kib-1e-a3N" kind="push" identifier="Skip" id="TR5-t4-8QV"/>
                         <segue destination="nwA-6C-yiS" kind="push" identifier="Push" id="gaI-Bb-21d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzd-bk-uWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="941"/>
+            <point key="canvasLocation" x="-583" y="941"/>
         </scene>
     </scenes>
     <resources>
@@ -1560,7 +1805,6 @@
         <image name="back3.png" width="1280" height="2272"/>
         <image name="back4.png" width="1280" height="2272"/>
         <image name="back5.png" width="1280" height="2272"/>
-        <image name="back6.png" width="1280" height="2272"/>
         <image name="back7.png" width="1280" height="2272"/>
         <image name="back8.png" width="1280" height="2272"/>
         <image name="back9.png" width="1280" height="2272"/>
@@ -1569,15 +1813,17 @@
         <image name="button3.png" width="800" height="350"/>
         <image name="dot.png" width="300" height="300"/>
         <image name="entry.png" width="800" height="350"/>
+        <image name="frame.png" width="800" height="350"/>
         <image name="icon1.png" width="24" height="24"/>
         <image name="icon2.png" width="24" height="24"/>
         <image name="icon3.png" width="24" height="24"/>
         <image name="icon4.png" width="24" height="24"/>
         <image name="icon5.png" width="24" height="24"/>
+        <image name="login.png" width="800" height="350"/>
         <image name="logo.png" width="1500" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="CgR-Zd-I3R"/>
         <segue reference="brw-fs-TIH"/>
-        <segue reference="0mc-Et-cGa"/>
     </inferredMetricsTieBreakers>
 </document>

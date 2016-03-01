@@ -102,6 +102,9 @@
 		22C537A71C849B4500C23254 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C537A61C849B4500C23254 /* image3.png */; };
 		22C537AB1C84BF2600C23254 /* back11.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C537AA1C84BF2600C23254 /* back11.png */; };
 		22C537AF1C84C25000C23254 /* button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C537AE1C84C25000C23254 /* button3.png */; };
+		22C537B11C857ACF00C23254 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C537B01C857ACF00C23254 /* PasswordViewController.swift */; };
+		22C537B31C85839500C23254 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C537B21C85839500C23254 /* login.png */; };
+		22C537B51C8585CF00C23254 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C537B41C8585CF00C23254 /* LogInViewController.swift */; };
 		7A1692981C7626B90092F933 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1692971C7626B90092F933 /* ColorManager.swift */; };
 		EAB172EAD383BE91EE97C4DF /* Pods_Original.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567D78A6F0D1A858BE843BC8 /* Pods_Original.framework */; };
 /* End PBXBuildFile section */
@@ -225,6 +228,9 @@
 		22C537A61C849B4500C23254 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
 		22C537AA1C84BF2600C23254 /* back11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back11.png; sourceTree = "<group>"; };
 		22C537AE1C84C25000C23254 /* button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button3.png; sourceTree = "<group>"; };
+		22C537B01C857ACF00C23254 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		22C537B21C85839500C23254 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		22C537B41C8585CF00C23254 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		567D78A6F0D1A858BE843BC8 /* Pods_Original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62084022B5CCCB12797CE9DB /* Pods-Original.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original.release.xcconfig"; path = "Pods/Target Support Files/Pods-Original/Pods-Original.release.xcconfig"; sourceTree = "<group>"; };
 		7A1692971C7626B90092F933 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
@@ -421,9 +427,11 @@
 			children = (
 				229068481C74C2570081A4CD /* AppDelegate.swift */,
 				223DC55F1C80A0E000845594 /* StartViewController.swift */,
+				22C537B41C8585CF00C23254 /* LogInViewController.swift */,
 				226D29DE1C82E3C7006A2E45 /* OverViewController.swift */,
 				226D29E61C8308A5006A2E45 /* InvitedViewController.swift */,
 				223DC54B1C804F8F00845594 /* RegistrationViewController.swift */,
+				22C537B01C857ACF00C23254 /* PasswordViewController.swift */,
 				223DB42F1C758AA3005AC2EC /* WeightViewController.swift */,
 				223DC5571C80635600845594 /* TargetWeightViewController.swift */,
 				223DC55D1C806C0500845594 /* DateViewController.swift */,
@@ -469,6 +477,7 @@
 				226D29621C81DFA7006A2E45 /* back3.png */,
 				226D29601C81DE91006A2E45 /* back4.png */,
 				226D29741C81FB9A006A2E45 /* back5.png */,
+				22C537B21C85839500C23254 /* login.png */,
 				226D29661C81EB2F006A2E45 /* back6.png */,
 				226D29761C82005E006A2E45 /* back7.png */,
 				226D297A1C820457006A2E45 /* back8.png */,
@@ -612,6 +621,7 @@
 				226D29501C81C344006A2E45 /* 2.png in Resources */,
 				223DB43C1C7610CA005AC2EC /* LaunchScreen.xib in Resources */,
 				226D29361C81BFA3006A2E45 /* mplus-1c-regular.ttf in Resources */,
+				22C537B31C85839500C23254 /* login.png in Resources */,
 				226D29ED1C8316EA006A2E45 /* back9.png in Resources */,
 				22C537A51C84993200C23254 /* image2.png in Resources */,
 				226D29C51C82DE04006A2E45 /* Icon-40@3x.png in Resources */,
@@ -760,7 +770,9 @@
 				223DB4301C758AA3005AC2EC /* WeightViewController.swift in Sources */,
 				2290684B1C74C2570081A4CD /* ViewController.swift in Sources */,
 				223DC5601C80A0E000845594 /* StartViewController.swift in Sources */,
+				22C537B11C857ACF00C23254 /* PasswordViewController.swift in Sources */,
 				223DC54A1C80384500845594 /* TweetViewController.swift in Sources */,
+				22C537B51C8585CF00C23254 /* LogInViewController.swift in Sources */,
 				22C537931C84363400C23254 /* Data.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
 				223DC54E1C80519200845594 /* SetUpViewController.swift in Sources */,

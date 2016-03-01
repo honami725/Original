@@ -12,6 +12,7 @@ import Parse
 class CheckViewController: UIViewController {
     
     @IBOutlet var myNameLabel : UILabel!
+    @IBOutlet var passwordLabel : UILabel!
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     @IBOutlet var dateLabel : UILabel!
@@ -33,6 +34,11 @@ class CheckViewController: UIViewController {
         //自分の名前を表示
         let myName = saveData.objectForKey("NAME")
         myNameLabel.text = myName as? String
+        
+        
+        //パスワードを表示
+        let password = saveData.objectForKey("PASS")
+        passwordLabel.text = password as? String
         
         //現在の体重を表示
         let weight : Double = saveData.doubleForKey("WEIGHT")
@@ -79,12 +85,16 @@ class CheckViewController: UIViewController {
         let doubleWeight2 : Double = saveData.doubleForKey("WEIGHT2")
     
         
-        let object: Data = Data()
-        object["Name"] = myNameLabel.text
+        let object: PFUser = PFUser()
+        object.username = myNameLabel.text
+        object.password = passwordLabel.text
         object["Weight"] = doubleWeight
         object["Weight2"] = doubleWeight2
         object["Date"] = dateLabel.text
-        object.saveInBackground()
+        object.signUpInBackgroundWithBlock { _ in
+            print("sign up")
+        }
+        
     }
 
     
