@@ -11,11 +11,12 @@ import Parse
 
 class ProgressViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var tableView : UITableView!
+    @IBOutlet var table : UITableView!
     @IBOutlet var myNameLabel : UILabel!
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     
+    private var myWeightArray: [String] = [String]()
     
     
     override func viewDidLoad() {
@@ -30,8 +31,8 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         //TableView
-        tableView.delegate = self
-        tableView.dataSource = self
+        table.delegate = self
+        table.dataSource = self
     
         //let saveData = NSUserDefaults.standardUserDefaults()
 
@@ -45,7 +46,10 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         //目標体重を表示
         let Weight2 : Double = PFUser.currentUser()!.objectForKey("Weight2") as! Double
         weight2Label.text = "\(Weight2)"
-
+        
+        
+        
+            
         
     }
     
@@ -63,25 +67,55 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.read()
+    }
+
+    
     //TableView設定
     // セルに表示するテキスト
     //let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
-    // セルの行数
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! WeightTableViewCell
+        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
+        //tweetLabel.textColor = UIColor.yellowColor()
+        cell.myWeightLabel.text = myWeightArray[indexPath.row]
+        cell.backgroundColor = UIColor.clearColor()
+        
+        
+        
+        return cell
     }
     
-    // セルの内容を変更
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let saveData = NSUserDefaults.standardUserDefaults()
-        let weight : Double = saveData.doubleForKey("weightData")
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let label = tableView.viewWithTag(1) as! UILabel!
-        label.text = "\(weight)"
+        return myWeightArray.count
+    }
+    
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
-        return cell
+    
+    func read(){
+        
+        let query:PFQuery = PFQuery(className: "Weight")
+        query.whereKey("User", equalTo: (PFUser.currentUser())!)
+        //query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                if let dataObjects: [PFObject] = objects! {
+                    for dataObject in dataObjects {
+                        self.myWeightArray.append(dataObject["WEIGHT"] as! String)
+                        
+                    }
+                }
+                self.table.reloadData()
+            }
+        }
     }
 
     

@@ -92,6 +92,7 @@
 		229068501C74C2570081A4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2290684F1C74C2570081A4CD /* Assets.xcassets */; };
 		2290685E1C74C2570081A4CD /* OriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290685D1C74C2570081A4CD /* OriginalTests.swift */; };
 		229068691C74C2570081A4CD /* OriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229068681C74C2570081A4CD /* OriginalUITests.swift */; };
+		22988C271C872F87008F061C /* WeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22988C261C872F87008F061C /* WeightTableViewCell.swift */; };
 		22A383A21C777AC200EAA5DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A3839F1C777AC200EAA5DE /* Default-568h@2x.png */; };
 		22A383A31C777AC200EAA5DE /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A383A01C777AC200EAA5DE /* Default-667h@2x.png */; };
 		22A383A41C777AC200EAA5DE /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A383A11C777AC200EAA5DE /* Default-736h@3x.png */; };
@@ -105,6 +106,7 @@
 		22C537B11C857ACF00C23254 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C537B01C857ACF00C23254 /* PasswordViewController.swift */; };
 		22C537B31C85839500C23254 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C537B21C85839500C23254 /* login.png */; };
 		22C537B51C8585CF00C23254 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C537B41C8585CF00C23254 /* LogInViewController.swift */; };
+		22C537B91C87032100C23254 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C537B81C87032100C23254 /* TableViewCell.swift */; };
 		7A1692981C7626B90092F933 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1692971C7626B90092F933 /* ColorManager.swift */; };
 		EAB172EAD383BE91EE97C4DF /* Pods_Original.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567D78A6F0D1A858BE843BC8 /* Pods_Original.framework */; };
 /* End PBXBuildFile section */
@@ -218,6 +220,7 @@
 		229068641C74C2570081A4CD /* OriginalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229068681C74C2570081A4CD /* OriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalUITests.swift; sourceTree = "<group>"; };
 		2290686A1C74C2570081A4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22988C261C872F87008F061C /* WeightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightTableViewCell.swift; sourceTree = "<group>"; };
 		22A3839F1C777AC200EAA5DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		22A383A01C777AC200EAA5DE /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		22A383A11C777AC200EAA5DE /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 		22C537B01C857ACF00C23254 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		22C537B21C85839500C23254 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		22C537B41C8585CF00C23254 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		22C537B81C87032100C23254 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		567D78A6F0D1A858BE843BC8 /* Pods_Original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62084022B5CCCB12797CE9DB /* Pods-Original.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Original.release.xcconfig"; path = "Pods/Target Support Files/Pods-Original/Pods-Original.release.xcconfig"; sourceTree = "<group>"; };
 		7A1692971C7626B90092F933 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				7A16928A1C76223D0092F933 /* Classes */,
+				7A1692961C7626A60092F933 /* Managers */,
 				7A1692881C7622010092F933 /* Resources */,
 				7A1692891C7622180092F933 /* Storyboards */,
 			);
@@ -417,7 +422,6 @@
 			isa = PBXGroup;
 			children = (
 				7A16928B1C7622430092F933 /* Controllers */,
-				7A1692961C7626A60092F933 /* Managers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -443,6 +447,8 @@
 				223DC5551C80627100845594 /* InputViewController.swift */,
 				223DC5491C80384500845594 /* TweetViewController.swift */,
 				223DC55B1C80687D00845594 /* ProfileViewController.swift */,
+				22C537B81C87032100C23254 /* TableViewCell.swift */,
+				22988C261C872F87008F061C /* WeightTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -453,7 +459,8 @@
 				7A1692971C7626B90092F933 /* ColorManager.swift */,
 				22C537921C84363400C23254 /* Data.swift */,
 			);
-			path = Managers;
+			name = Managers;
+			path = Classes/Managers;
 			sourceTree = "<group>";
 		};
 		7A1692991C7626ED0092F933 /* Images */ = {
@@ -775,7 +782,9 @@
 				22C537B51C8585CF00C23254 /* LogInViewController.swift in Sources */,
 				22C537931C84363400C23254 /* Data.swift in Sources */,
 				229068491C74C2570081A4CD /* AppDelegate.swift in Sources */,
+				22988C271C872F87008F061C /* WeightTableViewCell.swift in Sources */,
 				223DC54E1C80519200845594 /* SetUpViewController.swift in Sources */,
+				22C537B91C87032100C23254 /* TableViewCell.swift in Sources */,
 				223DC54C1C804F8F00845594 /* RegistrationViewController.swift in Sources */,
 				223DC5481C7DF1BC00845594 /* ProgressViewController.swift in Sources */,
 				223DC55A1C80668900845594 /* CheckViewController.swift in Sources */,

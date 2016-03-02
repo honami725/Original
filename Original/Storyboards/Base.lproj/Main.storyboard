@@ -220,7 +220,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-583" y="1637"/>
+            <point key="canvasLocation" x="-565" y="1667"/>
         </scene>
         <!--Invited View Controller-->
         <scene sceneID="utr-qE-1a2">
@@ -394,7 +394,7 @@
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="uJm-VH-KHy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="uJm-VH-KHy" customClass="WeightTableViewCell" customModule="Original" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uJm-VH-KHy" id="4R6-p5-QvR">
@@ -420,20 +420,23 @@
                                                     <rect key="frame" x="48" y="6" width="68" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="17"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9YQ-ge-68x">
                                                     <rect key="frame" x="241" y="11" width="79" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="17"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myWeightLabel" destination="9YQ-ge-68x" id="gxI-T0-IZX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -465,7 +468,7 @@
                     <tabBarItem key="tabBarItem" title="経過" image="icon2.png" id="fF7-vv-HzO"/>
                     <connections>
                         <outlet property="myNameLabel" destination="ZO7-7F-vl7" id="lLH-Bz-5av"/>
-                        <outlet property="tableView" destination="LqP-G6-Jci" id="aPu-ir-DtZ"/>
+                        <outlet property="table" destination="LqP-G6-Jci" id="Hra-xH-T9T"/>
                         <outlet property="weight2Label" destination="dkA-zE-N8B" id="Yig-Oz-Cos"/>
                         <outlet property="weightLabel" destination="nqB-f9-6gQ" id="Ocr-bj-B3j"/>
                     </connections>
@@ -619,7 +622,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He3-M8-sCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="1741"/>
+            <point key="canvasLocation" x="3118" y="1743"/>
         </scene>
         <!--入力-->
         <scene sceneID="4E0-GP-Gv0">
@@ -807,7 +810,6 @@
                                 <state key="normal" title="つぶやく" image="OK.png"/>
                                 <connections>
                                     <action selector="tweetButton" destination="R1H-Dc-hbN" eventType="touchUpInside" id="Qhi-i4-d49"/>
-                                    <segue destination="Htn-lS-zDe" kind="push" identifier="Push" id="B0T-MX-NN7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D67-Zs-eOO">
@@ -830,6 +832,7 @@
                     <connections>
                         <outlet property="error" destination="D67-Zs-eOO" id="WbS-50-KWq"/>
                         <outlet property="textField" destination="rbM-VL-Vmt" id="uHD-Cn-6J7"/>
+                        <segue destination="Kib-1e-a3N" kind="push" identifier="Push" id="VUh-XR-RUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqt-29-fa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -860,37 +863,6 @@
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8w-Vk-eGO">
-                                <rect key="frame" x="0.0" y="168" width="320" height="351"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tweetCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" id="jKm-vM-Tnc">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKm-vM-Tnc" id="oyY-PN-Mrq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jl9-nj-j07">
-                                                    <rect key="frame" x="8" y="11" width="150" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RIl-tu-5xZ">
-                                                    <rect key="frame" x="162" y="11" width="150" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d5f-zk-tf0">
                                 <rect key="frame" x="27" y="105" width="94" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -898,6 +870,40 @@
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8w-Vk-eGO">
+                                <rect key="frame" x="0.0" y="168" width="320" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="jKm-vM-Tnc" customClass="TableViewCell" customModule="Original" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKm-vM-Tnc" id="oyY-PN-Mrq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="CTF-Mp-TXh">
+                                                    <rect key="frame" x="8" y="11" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="ffp-GZ-IJ2">
+                                                    <rect key="frame" x="168" y="11" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myTweetLabel" destination="ffp-GZ-IJ2" id="gIH-SO-o3a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -905,7 +911,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myNameLabel" destination="uss-iG-yIL" id="ldZ-0f-WGg"/>
-                        <outlet property="tableView" destination="w8w-Vk-eGO" id="5ev-6C-sRe"/>
+                        <outlet property="table" destination="w8w-Vk-eGO" id="3b8-Oy-HOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JJ-Wj-FEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1792,7 +1798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzd-bk-uWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="941"/>
+            <point key="canvasLocation" x="-565" y="941"/>
         </scene>
     </scenes>
     <resources>
@@ -1835,8 +1841,7 @@
         <image name="logo.png" width="1500" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CgR-Zd-I3R"/>
-        <segue reference="B0T-MX-NN7"/>
-        <segue reference="brw-fs-TIH"/>
+        <segue reference="LC7-5P-fSj"/>
+        <segue reference="VUh-XR-RUr"/>
     </inferredMetricsTieBreakers>
 </document>

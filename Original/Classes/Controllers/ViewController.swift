@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet var myNameLabel : UILabel!
     @IBOutlet var dateLabel :UILabel!
+    @IBOutlet var myWeightLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,9 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
         //表示
         dateLabel.text = String(components.day)
         
+        
+        //あと何kg表示
+
         
         
     }

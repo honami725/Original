@@ -16,6 +16,7 @@ class InputViewController: UIViewController {
     @IBOutlet var error : UILabel!
     var number : Double = 0
     var dotNum : Int = 0
+    var weightData : Double = 0
     let saveData = NSUserDefaults.standardUserDefaults()
     
 
@@ -179,6 +180,9 @@ class InputViewController: UIViewController {
         
     }
     
+    
+    
+    
     //登録ボタン
     @IBAction func input(){
         if number == 0.0 || number >= 200.0{
@@ -190,6 +194,11 @@ class InputViewController: UIViewController {
             // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
             send["Weight"] = number
             send["User"] = PFUser.currentUser()
+            
+            let firstWeight : Double = PFUser.currentUser()!.objectForKey("Weight") as! Double
+            weightData = firstWeight - number
+            send["WEIGHT"] = weightData
+
             
             // Parseに送信
             send.saveInBackground()
