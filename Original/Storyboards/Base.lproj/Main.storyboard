@@ -88,6 +88,8 @@
             <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
+            <string>NicoKaku</string>
+            <string>NicoKaku</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -104,19 +106,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35n-ei-S4f">
-                                <rect key="frame" x="75" y="388" width="175" height="80"/>
+                                <rect key="frame" x="75" y="421" width="175" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="招待しますか？" image="entry.png"/>
                                 <connections>
                                     <segue destination="O1F-Ze-Ca6" kind="push" id="kOU-qJ-EM1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gn2-Mv-qCu">
-                                <rect key="frame" x="73" y="475" width="179" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="招待されましたか？" image="button.png"/>
-                                <connections>
-                                    <segue destination="N43-8h-CXe" kind="push" id="OR8-HE-vTp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -267,6 +261,13 @@
                                     <segue destination="I5X-wb-yTC" kind="push" id="brw-fs-TIH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dmd-Ic-tbX">
+                                <rect key="frame" x="36" y="329" width="248" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -282,7 +283,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-85" y="2021"/>
+            <point key="canvasLocation" x="2702" y="1656"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wWe-nP-H1P">
@@ -1563,7 +1564,7 @@
                                 <state key="normal" title="登録" image="entry.png"/>
                                 <connections>
                                     <action selector="input" destination="NRW-5n-1rL" eventType="touchUpInside" id="FsU-yd-D3r"/>
-                                    <segue destination="hKX-cP-sRe" kind="push" id="1BL-w6-jT9"/>
+                                    <segue destination="hKX-cP-sRe" kind="push" id="iHo-ds-Q4M"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※これ以降変更できません" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vu2-Nt-AvV">
@@ -1647,16 +1648,21 @@
                                 <rect key="frame" x="50" y="270" width="221" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="招待する" image="button2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bo3-Dr-DXG">
+                                <rect key="frame" x="50" y="380" width="206" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="button.png"/>
                                 <connections>
-                                    <action selector="shere:" destination="hKX-cP-sRe" eventType="touchUpInside" id="qz0-hF-frA"/>
+                                    <segue destination="N43-8h-CXe" kind="push" id="JiS-k0-ZpP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vg5-O4-igp">
-                                <rect key="frame" x="88" y="394" width="150" height="65"/>
+                                <rect key="frame" x="78" y="483" width="150" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="開始する" image="OK.png"/>
                                 <connections>
-                                    <segue destination="I5X-wb-yTC" kind="push" id="LC7-5P-fSj"/>
+                                    <segue destination="vC6-2T-CZe" kind="push" id="Vp7-Gf-cKX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1667,6 +1673,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Z8-az-uRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2702" y="941"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cvE-e8-bTw">
+            <objects>
+                <viewController id="vC6-2T-CZe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AGf-vV-z11">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="5Id-uZ-M2p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦相手待機中・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEI-dm-6lB">
+                                <rect key="frame" x="21" y="120" width="279" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3qc-3w-Kf6">
+                                <rect key="frame" x="53" y="359" width="213" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="START.png"/>
+                                <connections>
+                                    <segue destination="I5X-wb-yTC" kind="push" id="bCa-al-rVC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VYs-W6-kQY">
+                                <rect key="frame" x="79" y="247" width="162" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="button4.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9TS-c4-gTk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuA-g3-0pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3166" y="941"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="xBn-IJ-re8">
@@ -1735,7 +1782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ox0-8R-N4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3118" y="941"/>
+            <point key="canvasLocation" x="3648" y="941"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k1w-nO-oS0">
@@ -1829,6 +1876,7 @@
         <image name="button.png" width="1000" height="350"/>
         <image name="button2.png" width="800" height="350"/>
         <image name="button3.png" width="800" height="350"/>
+        <image name="button4.png" width="800" height="350"/>
         <image name="dot.png" width="300" height="300"/>
         <image name="entry.png" width="800" height="350"/>
         <image name="frame.png" width="800" height="350"/>
@@ -1841,7 +1889,7 @@
         <image name="logo.png" width="1500" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LC7-5P-fSj"/>
-        <segue reference="VUh-XR-RUr"/>
+        <segue reference="bCa-al-rVC"/>
+        <segue reference="0mc-Et-cGa"/>
     </inferredMetricsTieBreakers>
 </document>

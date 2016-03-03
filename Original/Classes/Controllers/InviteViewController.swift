@@ -8,10 +8,12 @@
 
 import UIKit
 import Accounts
+import Parse
 
 class InviteViewController: UIViewController {
-
-
+    
+    var getId : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,11 @@ class InviteViewController: UIViewController {
         
         //ステータスバー
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        
+        print("aaaa")
+        print("aaaa")
+
 
     }
     
@@ -41,11 +48,12 @@ class InviteViewController: UIViewController {
     @IBAction func shere(sender:UIButton){
         // ShareExtensionに渡すURLの用意
         // 共有する項目
-        let shareText = "Apple - Apple Watch"
-        let shareWebsite = NSURL(string: "https://www.apple.com/jp/watch/")!
-        let shareImage = UIImage(named: "1.png")!
         
-        let activityItems = [shareText, shareWebsite, shareImage]
+        let text1 = "【招待】\n対戦型ダイエットアプリ「You are FAT！」\n一緒に使いましょう！\n\n①まずはアプリをダウンロード\n②ダウンロードしたら「招待された方」をクリックして『\(getId)』を入れてね！"
+        let shareWebsite = NSURL(string: "https://itunes.apple.com/jp/genre/ios/id36?mt=8")!
+        //let shareImage = UIImage(named: "1.png")!
+        
+        let activityItems = [text1, shareWebsite]
         
         // 初期化処理
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)

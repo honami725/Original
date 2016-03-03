@@ -16,6 +16,7 @@ class CheckViewController: UIViewController {
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     @IBOutlet var dateLabel : UILabel!
+    var myId : String!
     let saveData = NSUserDefaults.standardUserDefaults()
    
 
@@ -56,6 +57,8 @@ class CheckViewController: UIViewController {
         dateLabel.text = date as? String
         
         
+        
+        
     }
     
     //ステータスバーを白くする
@@ -83,19 +86,51 @@ class CheckViewController: UIViewController {
     func create() {
         let doubleWeight : Double = saveData.doubleForKey("WEIGHT")
         let doubleWeight2 : Double = saveData.doubleForKey("WEIGHT2")
+ //               print("aaaa")
+        //乱数を取得する
+        let random = arc4random_uniform(1000)
+         myId = String(random)
+        //myId = "12345"
     
+ //       print("aaaa")
         
         let object: PFUser = PFUser()
         object.username = myNameLabel.text
         object.password = passwordLabel.text
+        //object["MyID"] = myId
+  //              print("aaaa")
         object["Weight"] = doubleWeight
         object["Weight2"] = doubleWeight2
         object["Date"] = dateLabel.text
         object.signUpInBackgroundWithBlock { _ in
             print("sign up")
-        }
+            PFUser.logInWithUsernameInBackground(self.myNameLabel.text!, password: self.passwordLabel.text!){
+                (user, error) -> Void in
+                if user != nil {
+                    let send:PFObject = PFObject(className: "Match")
+                    
+                    // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
+                    send["MyID"] = self.myId
+                    send["User"] = PFUser.currentUser()
+                    // Parseに送信
+                    //             print("aaaa")
+                    send.saveInBackground()
+
+                }else {
+                    print("ログインできません！")
+                }
+
+            }
+            
+            
+                   }
+  //      print("aaaa")
         
+
+
+    //            print("aaaa")
     }
+
 
     
 

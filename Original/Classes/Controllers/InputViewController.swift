@@ -17,6 +17,8 @@ class InputViewController: UIViewController {
     var number : Double = 0
     var dotNum : Int = 0
     var weightData : Double = 0
+    var weightData2 : Double = 0
+    
     let saveData = NSUserDefaults.standardUserDefaults()
     
 
@@ -190,15 +192,20 @@ class InputViewController: UIViewController {
         }else{
             
             let send:PFObject = PFObject(className: "Weight")
-            
-            // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
             send["Weight"] = number
             send["User"] = PFUser.currentUser()
             
             let firstWeight : Double = PFUser.currentUser()!.objectForKey("Weight") as! Double
-            weightData = firstWeight - number
-            send["WEIGHT"] = weightData
+            let goalWeight : Double = PFUser.currentUser()!.objectForKey("Weight2") as! Double
+            weightData = number - firstWeight
+            weightData2 = number - goalWeight
+            send["WEIGHT1"] = weightData
+            send["WEIGHT2"] = weightData2
+            
 
+    
+            
+            
             
             // Parseに送信
             send.saveInBackground()
@@ -208,6 +215,7 @@ class InputViewController: UIViewController {
             
         }
     }
+    
 
 
     /*
@@ -219,5 +227,4 @@ class InputViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

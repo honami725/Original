@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
         
         
         //あと何kg表示
-
+        
         
         
     }

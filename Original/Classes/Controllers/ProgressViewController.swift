@@ -16,7 +16,7 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     
-    private var myWeightArray: [String] = [String]()
+    private var myWeightArray: [Double] = [Double]()
     
     
     override func viewDidLoad() {
@@ -79,12 +79,8 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! WeightTableViewCell
-        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
-        //tweetLabel.textColor = UIColor.yellowColor()
-        cell.myWeightLabel.text = myWeightArray[indexPath.row]
+        cell.myWeightLabel.text = "\(myWeightArray)"
         cell.backgroundColor = UIColor.clearColor()
-        
-        
         
         return cell
     }
@@ -108,9 +104,8 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 if let dataObjects: [PFObject] = objects! {
-                    for dataObject in dataObjects {
-                        self.myWeightArray.append(dataObject["WEIGHT"] as! String)
-                        
+                    for _ in dataObjects {
+                        //self.myWeightArray.append(dataObject["Weight"] as! Double)
                     }
                 }
                 self.table.reloadData()

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class InvitedViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var textField : UITextField!
+    @IBOutlet var error : UILabel!
+    var pairId : String!
     
     
     override func viewDidLoad() {
@@ -39,6 +42,29 @@ class InvitedViewController: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func input(){
+        if textField.text == ""{
+            error.text = "IDが入力されていません"
+        }else{
+            //saveData.setObject(name.text, forKey: "NAME")
+            
+            //自分の段にPairID記入
+            let send:PFObject = PFObject(className: "Match")
+            send["PairID"] = textField.text
+            send["User"] = PFUser.currentUser()
+            send.saveInBackground()
+            
+            //ペアの人の段にPairID記入
+            //let query:PFQuery = PFQuery(className: "Match")
+            //query.whereKey("MyID", equalTo: (Match.MyID)!)
+            
+
+                        
+        }
+    }
+    
     
 
     //enter押したらキーボードが下がる
