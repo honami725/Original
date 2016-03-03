@@ -27,6 +27,7 @@ class TweetViewController: UIViewController, UITextFieldDelegate {
         self.textField.delegate = self
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
     }
     
     
@@ -49,6 +50,7 @@ class TweetViewController: UIViewController, UITextFieldDelegate {
         }else{
             
             let send:PFObject = PFObject(className: "Tweet")
+            
             
             // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
             send["Tweet"] = textField.text

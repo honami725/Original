@@ -29,17 +29,11 @@
             <string>FGModernGothic</string>
             <string>FGModernGothic</string>
             <string>FGModernGothic</string>
-            <string>FGModernGothic</string>
-            <string>FGModernGothic</string>
         </mutableArray>
         <mutableArray key="mplus-1c-heavy.ttf">
             <string>mplus-1c-heavy</string>
         </mutableArray>
         <mutableArray key="nicokaku_v1.ttf">
-            <string>NicoKaku</string>
-            <string>NicoKaku</string>
-            <string>NicoKaku</string>
-            <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
             <string>NicoKaku</string>
@@ -106,7 +100,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35n-ei-S4f">
-                                <rect key="frame" x="75" y="421" width="175" height="80"/>
+                                <rect key="frame" x="73" y="428" width="175" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="招待しますか？" image="entry.png"/>
                                 <connections>
@@ -214,7 +208,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-565" y="1667"/>
+            <point key="canvasLocation" x="-565" y="1687"/>
         </scene>
         <!--Invited View Controller-->
         <scene sceneID="utr-qE-1a2">
@@ -283,7 +277,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2702" y="1656"/>
+            <point key="canvasLocation" x="2716" y="1678"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wWe-nP-H1P">
@@ -326,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFi-Lr-5qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="2514"/>
+            <point key="canvasLocation" x="1706" y="3234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Mr-pW-ORa">
@@ -367,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVE-Kd-A1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253" y="2514"/>
+            <point key="canvasLocation" x="2143" y="3234"/>
         </scene>
         <!--経過-->
         <scene sceneID="5uh-HU-kEb">
@@ -395,37 +389,22 @@
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="uJm-VH-KHy" customClass="WeightTableViewCell" customModule="Original" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uJm-VH-KHy" customClass="TableViewCell" customModule="Original" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uJm-VH-KHy" id="4R6-p5-QvR">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GTx-9W-GDT">
-                                                    <rect key="frame" x="129" y="11" width="62" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="dsQ-Yp-6ni">
+                                                    <rect key="frame" x="145" y="8" width="167" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="17"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="c9G-h3-j0o">
-                                                    <rect key="frame" x="203" y="6" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XJ5-1V-5HV">
-                                                    <rect key="frame" x="8" y="3" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7SC-Sh-kaw">
-                                                    <rect key="frame" x="48" y="6" width="68" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9YQ-ge-68x">
-                                                    <rect key="frame" x="241" y="11" width="79" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9YQ-ge-68x">
+                                                    <rect key="frame" x="8" y="8" width="118" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -436,7 +415,8 @@
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="myWeightLabel" destination="9YQ-ge-68x" id="gxI-T0-IZX"/>
+                                            <outlet property="myTweetLabel" destination="dsQ-Yp-6ni" id="CWG-nH-9GN"/>
+                                            <outlet property="myWeightLabel" destination="9YQ-ge-68x" id="UJa-j9-Lsr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -463,84 +443,85 @@
                                 <color key="textColor" red="0.99792200330000003" green="0.94343487609999999" blue="0.51356646780000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yz5-8Y-pWP">
+                                <rect key="frame" x="30" y="239" width="260" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="経過" image="icon2.png" id="fF7-vv-HzO"/>
                     <connections>
+                        <outlet property="error" destination="Yz5-8Y-pWP" id="NEp-cn-8NV"/>
                         <outlet property="myNameLabel" destination="ZO7-7F-vl7" id="lLH-Bz-5av"/>
                         <outlet property="table" destination="LqP-G6-Jci" id="Hra-xH-T9T"/>
                         <outlet property="weight2Label" destination="dkA-zE-N8B" id="Yig-Oz-Cos"/>
                         <outlet property="weightLabel" destination="nqB-f9-6gQ" id="Ocr-bj-B3j"/>
+                        <outlet property="yourNameLable" destination="eVF-wu-fKm" id="HIf-Bk-fkY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVt-Pu-Lcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2694" y="2495"/>
+            <point key="canvasLocation" x="2316" y="2505"/>
         </scene>
-        <!--つぶやき-->
+        <!--設定-->
         <scene sceneID="TzP-IF-fx5">
             <objects>
-                <viewController id="KiZ-Yb-HBi" sceneMemberID="viewController">
+                <viewController id="KiZ-Yb-HBi" customClass="InviteViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vhT-9J-LaD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back9.png" id="6nj-sT-tbK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="6nj-sT-tbK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cff-JI-WEY">
-                                <rect key="frame" x="27" y="112" width="141" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦相手を招待しよう!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MxD-IB-w06">
+                                <rect key="frame" x="34" y="158" width="253" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OSV-MD-mrZ">
-                                <rect key="frame" x="111" y="173" width="141" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HN1-bT-Y1w">
+                                <rect key="frame" x="50" y="212" width="221" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oxe-mK-qbT">
-                                <rect key="frame" x="48" y="234" width="141" height="40"/>
+                                <state key="normal" title="招待する" image="button2.png"/>
+                                <connections>
+                                    <action selector="shere:" destination="KiZ-Yb-HBi" eventType="touchUpInside" id="Not-d1-dQg"/>
+                                    <action selector="shere:" destination="hKX-cP-sRe" eventType="touchUpInside" id="hfX-6d-9sx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="iQ1-3B-r6b">
+                                <rect key="frame" x="111" y="357" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z8X-Qt-aMX">
-                                <rect key="frame" x="141" y="294" width="141" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OUw-rN-Xap">
+                                <rect key="frame" x="137" y="400" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="q5f-GT-VsO">
-                                <rect key="frame" x="25" y="356" width="141" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="voE-Nh-7fN">
-                                <rect key="frame" x="154" y="417" width="141" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="search" destination="KiZ-Yb-HBi" eventType="touchUpInside" id="7cw-lZ-33b"/>
+                                    <action selector="search" destination="Htn-lS-zDe" eventType="touchUpInside" id="Dki-qq-UGy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="つぶやき" image="icon4.png" id="wpY-Bo-mIM"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="icon4.png" id="wpY-Bo-mIM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pairUserName" destination="iQ1-3B-r6b" id="UQy-D3-EAu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2K7-2A-pMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3521" y="2495"/>
+            <point key="canvasLocation" x="3137" y="2485"/>
         </scene>
         <!--HOME-->
         <scene sceneID="fsn-Pv-kXW">
@@ -559,13 +540,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="23"/>
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sq5-AF-Zi2">
-                                <rect key="frame" x="102" y="129" width="119" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OML-vv-uG0">
@@ -589,19 +563,45 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sq5-AF-Zi2">
+                                <rect key="frame" x="101" y="129" width="119" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FGModernGothic" family="FGModernGothic" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="plh-Ew-tsh">
+                                <rect key="frame" x="18" y="426" width="284" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OXc-Ke-Qfd">
+                                <rect key="frame" x="20" y="458" width="284" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="HOME" image="icon1.png" id="G8q-50-PKA"/>
                     <navigationItem key="navigationItem" id="8iR-4T-kxh"/>
                     <connections>
-                        <outlet property="dateLabel" destination="Sq5-AF-Zi2" id="MAq-df-TDI"/>
+                        <outlet property="error1" destination="plh-Ew-tsh" id="GXL-Sy-2oe"/>
+                        <outlet property="error2" destination="OXc-Ke-Qfd" id="991-zA-1w9"/>
+                        <outlet property="myDateLabel" destination="Sq5-AF-Zi2" id="9KL-dJ-WjP"/>
                         <outlet property="myNameLabel" destination="EwA-oT-dHc" id="xum-Kg-D8U"/>
+                        <outlet property="myWeightLabel" destination="L9k-jo-OQI" id="nUo-3U-5x0"/>
+                        <outlet property="yourNameLabel" destination="UEE-AH-eb4" id="Zul-bj-ONy"/>
+                        <outlet property="yourWeightLabel" destination="OML-vv-uG0" id="o4L-vG-JcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1r-fj-Fwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282" y="2495"/>
+            <point key="canvasLocation" x="1860" y="2505"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="krX-MV-qKx">
@@ -623,7 +623,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He3-M8-sCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3118" y="1743"/>
+            <point key="canvasLocation" x="2308" y="1725"/>
         </scene>
         <!--入力-->
         <scene sceneID="4E0-GP-Gv0">
@@ -741,13 +741,6 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kie-FY-0R3">
-                                <rect key="frame" x="30" y="156" width="261" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0l-8l-yeG">
                                 <rect key="frame" x="213" y="110" width="44" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -763,6 +756,13 @@
                                     <action selector="input" destination="L6C-WC-6nZ" eventType="touchUpInside" id="cJn-u1-MeH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kie-FY-0R3">
+                                <rect key="frame" x="30" y="152" width="261" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -777,7 +777,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wM-KZ-auv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="2495"/>
+            <point key="canvasLocation" x="2716" y="2495"/>
         </scene>
         <!--Tweet View Controller-->
         <scene sceneID="vFJ-N3-w7q">
@@ -843,7 +843,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3102" y="3231"/>
+            <point key="canvasLocation" x="2716" y="3234"/>
         </scene>
         <!--プロフィール-->
         <scene sceneID="4KN-WM-Sgn">
@@ -871,53 +871,51 @@
                                 <color key="textColor" red="0.1529411765" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8w-Vk-eGO">
-                                <rect key="frame" x="0.0" y="168" width="320" height="351"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qfC-UF-9Ua">
+                                <rect key="frame" x="106" y="317" width="109" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="jKm-vM-Tnc" customClass="TableViewCell" customModule="Original" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKm-vM-Tnc" id="oyY-PN-Mrq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="CTF-Mp-TXh">
-                                                    <rect key="frame" x="8" y="11" width="144" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="ffp-GZ-IJ2">
-                                                    <rect key="frame" x="168" y="11" width="144" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="myTweetLabel" destination="ffp-GZ-IJ2" id="gIH-SO-o3a"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="signOut:" destination="q9t-uD-P2a" eventType="touchUpInside" id="oh6-jz-xcW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0x8-Tk-ZCF">
+                                <rect key="frame" x="34" y="151" width="260" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0i-3M-DgY">
+                                <rect key="frame" x="65" y="224" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83V-j3-XYf">
+                                <rect key="frame" x="65" y="184" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="プロフィール" image="icon5.png" id="gkO-ac-3so"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="createdDateLabel" destination="f0i-3M-DgY" id="iE3-NW-bfG"/>
+                        <outlet property="dateLabel" destination="83V-j3-XYf" id="TGm-FJ-18z"/>
+                        <outlet property="error" destination="0x8-Tk-ZCF" id="d72-f3-ymN"/>
                         <outlet property="myNameLabel" destination="uss-iG-yIL" id="ldZ-0f-WGg"/>
-                        <outlet property="table" destination="w8w-Vk-eGO" id="3b8-Oy-HOu"/>
+                        <outlet property="yourNameLabel" destination="d5f-zk-tf0" id="OH3-kI-NKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JJ-Wj-FEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3903" y="2495"/>
+            <point key="canvasLocation" x="3550" y="2485"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="AD2-QL-e07">
@@ -1477,7 +1475,7 @@
             </objects>
             <point key="canvasLocation" x="1910" y="941"/>
         </scene>
-        <!--確認-->
+        <!--Check View Controller-->
         <scene sceneID="ILM-bv-b5h">
             <objects>
                 <viewController id="NRW-5n-1rL" customClass="CheckViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
@@ -1564,7 +1562,6 @@
                                 <state key="normal" title="登録" image="entry.png"/>
                                 <connections>
                                     <action selector="input" destination="NRW-5n-1rL" eventType="touchUpInside" id="FsU-yd-D3r"/>
-                                    <segue destination="hKX-cP-sRe" kind="push" id="iHo-ds-Q4M"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※これ以降変更できません" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vu2-Nt-AvV">
@@ -1612,23 +1609,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="確認" id="QKi-kb-LfD"/>
+                    <navigationItem key="navigationItem" id="QKi-kb-LfD"/>
                     <connections>
                         <outlet property="dateLabel" destination="mIl-ec-1Lk" id="I7G-bR-XXc"/>
                         <outlet property="myNameLabel" destination="h4a-zb-WMH" id="8Ia-RX-0Wj"/>
                         <outlet property="passwordLabel" destination="aig-hY-P96" id="VUC-qC-QV2"/>
                         <outlet property="weight2Label" destination="OYT-Bb-Fb8" id="pRa-c5-blV"/>
                         <outlet property="weightLabel" destination="8Bp-cs-O3y" id="eov-Qw-52G"/>
+                        <segue destination="Kib-1e-a3N" kind="modal" identifier="Segue" id="egP-LK-AjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NY-qb-fxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2308" y="941"/>
         </scene>
-        <!--Invite View Controller-->
+        <!--View Controller-->
         <scene sceneID="4kl-nR-03O">
             <objects>
-                <viewController id="hKX-cP-sRe" customClass="InviteViewController" customModule="Original" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hKX-cP-sRe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSI-FO-Gyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1637,18 +1635,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦相手を招待しよう!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MxD-IB-w06">
-                                <rect key="frame" x="34" y="141" width="253" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="26"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HN1-bT-Y1w">
-                                <rect key="frame" x="50" y="270" width="221" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="招待する" image="button2.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bo3-Dr-DXG">
                                 <rect key="frame" x="50" y="380" width="206" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1661,9 +1647,6 @@
                                 <rect key="frame" x="78" y="483" width="150" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="開始する" image="OK.png"/>
-                                <connections>
-                                    <segue destination="vC6-2T-CZe" kind="push" id="Vp7-Gf-cKX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1672,48 +1655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Z8-az-uRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2702" y="941"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cvE-e8-bTw">
-            <objects>
-                <viewController id="vC6-2T-CZe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AGf-vV-z11">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" id="5Id-uZ-M2p">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦相手待機中・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qEI-dm-6lB">
-                                <rect key="frame" x="21" y="120" width="279" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NicoKaku" family="NicoKaku" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3qc-3w-Kf6">
-                                <rect key="frame" x="53" y="359" width="213" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="START.png"/>
-                                <connections>
-                                    <segue destination="I5X-wb-yTC" kind="push" id="bCa-al-rVC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VYs-W6-kQY">
-                                <rect key="frame" x="79" y="247" width="162" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="button4.png"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9TS-c4-gTk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QuA-g3-0pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3166" y="941"/>
+            <point key="canvasLocation" x="2716" y="951"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="xBn-IJ-re8">
@@ -1777,7 +1719,6 @@
                     <connections>
                         <outlet property="dateLabel" destination="Lvq-Y6-uQe" id="xWH-h7-Bvw"/>
                         <outlet property="myNameLabel" destination="e5i-GX-NtF" id="XAD-si-2vb"/>
-                        <segue destination="Kib-1e-a3N" kind="push" identifier="Push" id="0mc-Et-cGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ox0-8R-N4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1872,11 +1813,9 @@
         <image name="back5.png" width="1280" height="2272"/>
         <image name="back7.png" width="1280" height="2272"/>
         <image name="back8.png" width="1280" height="2272"/>
-        <image name="back9.png" width="1280" height="2272"/>
         <image name="button.png" width="1000" height="350"/>
         <image name="button2.png" width="800" height="350"/>
         <image name="button3.png" width="800" height="350"/>
-        <image name="button4.png" width="800" height="350"/>
         <image name="dot.png" width="300" height="300"/>
         <image name="entry.png" width="800" height="350"/>
         <image name="frame.png" width="800" height="350"/>
@@ -1889,7 +1828,6 @@
         <image name="logo.png" width="1500" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bCa-al-rVC"/>
-        <segue reference="0mc-Et-cGa"/>
+        <segue reference="CgR-Zd-I3R"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,10 +13,15 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var table : UITableView!
     @IBOutlet var myNameLabel : UILabel!
+    @IBOutlet var yourNameLable : UILabel!
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
+    @IBOutlet var error : UILabel!
+    let saveData = NSUserDefaults.standardUserDefaults()
+
     
-    private var myWeightArray: [Double] = [Double]()
+    private var myWeightArray: [String] = [String]()
+    private var myTweetArray: [String] = [String]()
     
     
     override func viewDidLoad() {
@@ -28,7 +33,7 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
 
         
         //NavigationBarを表示する
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         //TableView
         table.delegate = self
@@ -38,14 +43,27 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
 
         //自分の名前を表示
         myNameLabel.text = PFUser.currentUser()!.username! as String
+
+        //相手の名前を表示
+        let yourName = saveData.objectForKey("YNAME")
+        if yourName == nil {
+            self.yourNameLable.text = "名無し"
+            error.text = "対戦相手が登録されていないよ！"
+        }else{
+            self.yourNameLable.text = yourName as? String
+            error.text = ""
+        }
+
+        
         
         //現在の体重を表示
-        let firstWeight : Double = PFUser.currentUser()!.objectForKey("Weight") as! Double
-        weightLabel.text = "\(firstWeight)"
+        let weight : Double = saveData.doubleForKey("WEIGHT")
+        weightLabel.text = "\(weight)"
         
         //目標体重を表示
-        let Weight2 : Double = PFUser.currentUser()!.objectForKey("Weight2") as! Double
-        weight2Label.text = "\(Weight2)"
+        let weight2 : Double = saveData.doubleForKey("WEIGHT2")
+        weight2Label.text = "\(weight2)"
+        
         
         
         
@@ -69,7 +87,8 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.read()
+        self.weightRead()
+        self.tweetRead()
     }
 
     
@@ -78,9 +97,14 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     //let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! WeightTableViewCell
-        cell.myWeightLabel.text = "\(myWeightArray)"
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TableViewCell
+        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
+        //tweetLabel.textColor = UIColor.yellowColor()
+        cell.myTweetLabel.text = myTweetArray[indexPath.row]
+        cell.myWeightLabel.text = myWeightArray[indexPath.row]
         cell.backgroundColor = UIColor.clearColor()
+        
+        
         
         return cell
     }
@@ -94,24 +118,59 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-
     
-    func read(){
+    
+    // セルの内容を変更
+    //    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
+    //        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
+    //        //tweetLabel.text = myWeightArray[indexPath.row]
+    //
+    //        cell.textLabel?.text = "hogehoge"
+    //
+    //        NSLog("hoge")
+    //
+    //        return cell
+    //    }
+    
+    func tweetRead(){
         
-        let query:PFQuery = PFQuery(className: "Weight")
+        let query:PFQuery = PFQuery(className: "Tweet")
         query.whereKey("User", equalTo: (PFUser.currentUser())!)
-        //query.orderByAscending("createdAt")
+        query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 if let dataObjects: [PFObject] = objects! {
-                    for _ in dataObjects {
-                        //self.myWeightArray.append(dataObject["Weight"] as! Double)
+                    for dataObject in dataObjects {
+                        self.myTweetArray.append(dataObject["Tweet"] as! String)
+                        
                     }
                 }
                 self.table.reloadData()
             }
         }
     }
+    
+    func weightRead(){
+        
+        let query:PFQuery = PFQuery(className: "Weight")
+        query.whereKey("User", equalTo: (PFUser.currentUser())!)
+        query.orderByAscending("createdAt")
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                if let dataObjects: [PFObject] = objects! {
+                    for dataObject in dataObjects {
+                        self.myWeightArray.append(dataObject["Weight"] as! String)
+                        
+                    }
+                }
+                self.table.reloadData()
+            }
+        }
+    }
+
+
+
 
     
 

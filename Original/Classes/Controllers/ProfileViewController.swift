@@ -9,10 +9,14 @@
 import UIKit
 import Parse
 
-class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ProfileViewController: UIViewController{
     
-    @IBOutlet var table : UITableView!
     @IBOutlet var myNameLabel : UILabel!
+    @IBOutlet var yourNameLabel : UILabel!
+    @IBOutlet var error : UILabel!
+    @IBOutlet var dateLabel : UILabel!
+    @IBOutlet var createdDateLabel : UILabel!
+    let saveData = NSUserDefaults.standardUserDefaults()
     
     private var myTweetArray: [String] = [String]()
     //private var text: String!
@@ -27,12 +31,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         
         //NavigationBarを表示する
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+       self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        //TableView
-        table.dataSource = self
-        table.delegate = self
-        
+
         
         
 
@@ -41,7 +42,28 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         //自分の名前を表示
         myNameLabel.text = PFUser.currentUser()!.username! as String
+    
+        //相手の名前を表示
+        let yourName = saveData.objectForKey("YNAME")
+        if yourName == nil {
+            self.yourNameLabel.text = "名無し"
+            error.text = "対戦相手が登録されていないよ！"
+        }else{
+            self.yourNameLabel.text = yourName as? String
+            error.text = ""
+        }
         
+        //期限の表示
+        let date = saveData.objectForKey("DATE")
+        dateLabel.text = date as? String
+        
+        //開始日の表示
+        let Date = PFUser.currentUser()!.objectForKey("createdDate") as! String
+        createdDateLabel.text = Date
+
+        
+
+    
     }
     
     //ステータスバーを白くする
@@ -59,94 +81,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.read()
     }
 
-    
-    //TableView設定
-    // セルに表示するテキスト
-    //let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    
-    // セルの行数
-    
-    
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TableViewCell
-                //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
-                //tweetLabel.textColor = UIColor.yellowColor()
-                cell.myTweetLabel.text = myTweetArray[indexPath.row]
-                cell.backgroundColor = UIColor.clearColor()
-        
-        
-        
-                return cell
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return myTweetArray.count
-    }
-    
-    
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-    
-    // セルの内容を変更
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
-//        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
-//        //tweetLabel.text = myWeightArray[indexPath.row]
-//        
-//        cell.textLabel?.text = "hogehoge"
-//        
-//        NSLog("hoge")
-//        
-//        return cell
-//    }
-    
-    func read(){
-        
-        let query:PFQuery = PFQuery(className: "Tweet")
-        query.whereKey("User", equalTo: (PFUser.currentUser())!)
-        //query.orderByAscending("createdAt")
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            if error == nil {
-                if let dataObjects: [PFObject] = objects! {
-                    for dataObject in dataObjects {
-                        self.myTweetArray.append(dataObject["Tweet"] as! String)
-                    
-                    }
-                }
-                self.table.reloadData()
-            }
-        }
+    @IBAction func signOut(sender: AnyObject) {
+        PFUser .logOut() // ログアウトの処理はこれだけでOK
+        self.navigationController!.popToRootViewControllerAnimated(true)
     }
     
     
     
     
-    
-//    func read(){
-//        let query = PFQuery(className: "Tweet")
-//        query.whereKey("User", equalTo: (PFUser.currentUser())!)
-//        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-//            if error == nil {
-//                if let dataObjects: [PFObject] = objects! {
-//                    for dataObject in dataObjects {
-//                        self.myWeightArray.append(dataObject["Tweet"] as! String)
-//                    }
-//                    print("contentArray...\(self.myWeightArray)")
-//                    
-//                }
-//                
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
     
 
     /*

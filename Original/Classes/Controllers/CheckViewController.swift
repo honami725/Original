@@ -16,7 +16,10 @@ class CheckViewController: UIViewController {
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
     @IBOutlet var dateLabel : UILabel!
-    var myId : String!
+    var weightDate : String!
+    var nowDate : String!
+//    var doubleWeight : Double = 0.0
+//    var doubleWeight2 : Double = 0.0
     let saveData = NSUserDefaults.standardUserDefaults()
    
 
@@ -56,7 +59,12 @@ class CheckViewController: UIViewController {
         let date = saveData.objectForKey("DATE")
         dateLabel.text = date as? String
         
-        
+        //現在日時の取得
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy年MM月dd日"
+        let now = NSDate()
+        nowDate = dateFormatter.stringFromDate(now)
         
         
     }
@@ -74,62 +82,55 @@ class CheckViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if (segue.identifier == "Segue") {
+//            // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
+//            let secondView : ViewController = segue.destinationViewController as! ViewController
+//            // secondView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
+//            // この時SecondViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
+//            secondView.id = self.myId
+//            
+//        }
+//    }
+    
     //登録ボタン
     @IBAction func input(){
-       self.create()
-    }
-    
-    
         
-    
-    //生成
-    func create() {
-        let doubleWeight : Double = saveData.doubleForKey("WEIGHT")
-        let doubleWeight2 : Double = saveData.doubleForKey("WEIGHT2")
- //               print("aaaa")
-        //乱数を取得する
-        let random = arc4random_uniform(1000)
-         myId = String(random)
-        //myId = "12345"
-    
- //       print("aaaa")
-        
+        saveData.removeObjectForKey("YNAME")
+        saveData.removeObjectForKey("YWEIGHT")
         let object: PFUser = PFUser()
         object.username = myNameLabel.text
         object.password = passwordLabel.text
-        //object["MyID"] = myId
-  //              print("aaaa")
-        object["Weight"] = doubleWeight
-        object["Weight2"] = doubleWeight2
+        
+        
+        
+        let doubleWeight = saveData.doubleForKey("WEIGHT")
+        let doubleWeight2 = saveData.doubleForKey("WEIGHT2")
+        let doubleWeightDate = doubleWeight - doubleWeight2
+        weightDate = String(doubleWeightDate)
+        
+        
+        object["createdDate"] = nowDate
         object["Date"] = dateLabel.text
+        object["WEIGHT"] = weightDate
         object.signUpInBackgroundWithBlock { _ in
             print("sign up")
             PFUser.logInWithUsernameInBackground(self.myNameLabel.text!, password: self.passwordLabel.text!){
                 (user, error) -> Void in
                 if user != nil {
-                    let send:PFObject = PFObject(className: "Match")
-                    
-                    // カラムを作成する。ここでは、ユーザーとTweet内容用のカラムを作成。
-                    send["MyID"] = self.myId
-                    send["User"] = PFUser.currentUser()
-                    // Parseに送信
-                    //             print("aaaa")
-                    send.saveInBackground()
-
                 }else {
                     print("ログインできません！")
                 }
-
+                
             }
-            
-            
-                   }
-  //      print("aaaa")
-        
+            self.performSegueWithIdentifier("Segue", sender: nil)
 
-
-    //            print("aaaa")
     }
+    
+    }
+    
+    
+        
 
 
     

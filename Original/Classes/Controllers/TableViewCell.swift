@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     @IBOutlet var myTweetLabel : UILabel!
+    @IBOutlet var myWeightLabel : UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
