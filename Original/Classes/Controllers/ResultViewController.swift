@@ -14,8 +14,8 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var winnerLabel : UILabel!
     @IBOutlet var dateLabel : UILabel!
-    var yourWeight : Double!
-    var myWeight : Double!
+    var yourWeight : Double! = 2.0
+    var myWeight : Double! = 1.0
     let saveData = NSUserDefaults.standardUserDefaults()
     private var yourWeightArray: [String?] = [String?]()
     
@@ -24,8 +24,8 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        self.read()
-        self.newWeightGet()
+        //self.read()
+        //self.newWeightGet()
         myWeight = saveData.doubleForKey("newWeight")
         if myWeight > yourWeight{
             let yourName = saveData.objectForKey("YNAME")
@@ -66,36 +66,36 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func read(){
-            let yourId = saveData.objectForKey("YID") as! String
-            let query:PFQuery = PFUser.query()!
-            query.whereKey("User", equalTo: yourId)
-            query.orderByAscending("createdAt")
-            query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-                if error == nil {
-                    if let dataObjects: [PFObject] = objects! {
-                        for dataObject in dataObjects {
-                            self.yourWeightArray.append(dataObject["Weight"] as? String)
-    
-                        }
-                    }else{
-                        print("error1")
-                    }
-                }else{
-                    print("error2")
-                }
-            }
-    }
-    
-    func newWeightGet(){
-        let part = yourWeightArray[0]
-        print(part)
-        let goalWeight = PFUser.currentUser()!.objectForKey("weight") as! String
-        let doublePart = Double(part!)
-        let doubleGoalWeight = Double(goalWeight)
-        yourWeight = doublePart! - doubleGoalWeight!
-    }
-    
+//    func read(){
+//            let yourId = saveData.objectForKey("YID") as! String
+//            let query:PFQuery = PFUser.query()!
+//            query.whereKey("User", equalTo: yourId)
+//            query.orderByAscending("createdAt")
+//            query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//                if error == nil {
+//                    if let dataObjects: [PFObject] = objects! {
+//                        for dataObject in dataObjects {
+//                            self.yourWeightArray.append(dataObject["Weight"] as? String)
+//    
+//                        }
+//                    }else{
+//                        print("error1")
+//                    }
+//                }else{
+//                    print("error2")
+//                }
+//            }
+//    }
+//    
+//    func newWeightGet(){
+//        let part = yourWeightArray[0]
+//        print(part)
+//        let goalWeight = PFUser.currentUser()!.objectForKey("weight") as! String
+//        let doublePart = Double(part!)
+//        let doubleGoalWeight = Double(goalWeight)
+//        yourWeight = doublePart! - doubleGoalWeight!
+//    }
+//    
 
     
 
