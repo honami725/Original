@@ -12,11 +12,8 @@ import Parse
 class ProgressViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table : UITableView!
-    @IBOutlet var myNameLabel : UILabel!
-    @IBOutlet var yourNameLable : UILabel!
     @IBOutlet var weightLabel : UILabel!
     @IBOutlet var weight2Label : UILabel!
-    @IBOutlet var error : UILabel!
     let saveData = NSUserDefaults.standardUserDefaults()
 
     
@@ -38,25 +35,10 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         //TableView
         table.delegate = self
         table.dataSource = self
-    
-        //let saveData = NSUserDefaults.standardUserDefaults()
-
-        //自分の名前を表示
-        myNameLabel.text = PFUser.currentUser()!.username! as String
-
-        //相手の名前を表示
-        let yourName = saveData.objectForKey("YNAME")
-        if yourName == nil {
-            self.yourNameLable.text = "名無し"
-            error.text = "対戦相手が登録されていないよ！"
-        }else{
-            self.yourNameLable.text = yourName as? String
-            error.text = ""
-        }
 
         
         
-        //現在の体重を表示
+        //初期の体重を表示
         let weight : Double = saveData.doubleForKey("WEIGHT")
         weightLabel.text = "\(weight)"
         
@@ -65,9 +47,6 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
         weight2Label.text = "\(weight2)"
         
         
-        
-        
-            
         
     }
     
@@ -92,14 +71,8 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     
-    //TableView設定
-    // セルに表示するテキスト
-    //let texts = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TableViewCell
-        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
-        //tweetLabel.textColor = UIColor.yellowColor()
         cell.myTweetLabel.text = myTweetArray[indexPath.row]
         cell.myWeightLabel.text = myWeightArray[indexPath.row]
         cell.backgroundColor = UIColor.clearColor()
@@ -111,27 +84,13 @@ class ProgressViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return myWeightArray.count
+        return myTweetArray.count
     }
     
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
-    
-    // セルの内容を変更
-    //    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
-    //        //let tweetLabel = tableView.viewWithTag(1) as! UILabel!
-    //        //tweetLabel.text = myWeightArray[indexPath.row]
-    //
-    //        cell.textLabel?.text = "hogehoge"
-    //
-    //        NSLog("hoge")
-    //
-    //        return cell
-    //    }
     
     func tweetRead(){
         

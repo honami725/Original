@@ -96,6 +96,7 @@ class CheckViewController: UIViewController {
     //登録ボタン
     @IBAction func input(){
         
+        saveData.setInteger(1, forKey: "SKIP")
         saveData.removeObjectForKey("YNAME")
         saveData.removeObjectForKey("YWEIGHT")
         let object: PFUser = PFUser()
@@ -110,6 +111,7 @@ class CheckViewController: UIViewController {
         weightDate = String(doubleWeightDate)
         
         
+        object["weight"] = doubleWeight2
         object["createdDate"] = nowDate
         object["Date"] = dateLabel.text
         object["WEIGHT"] = weightDate

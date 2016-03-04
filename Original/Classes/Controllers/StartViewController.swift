@@ -10,7 +10,8 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    
+    let saveData = NSUserDefaults.standardUserDefaults()
+
 
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
@@ -55,8 +56,7 @@ class StartViewController: UIViewController {
     @IBAction func input(){
         performSegueWithIdentifier("Push", sender: nil)
         
-        
-//        if saveDate.arrayForKey("SKIP") != nil{
+//        if saveData.arrayForKey("SKIP") != nil{
 //            performSegueWithIdentifier("Push", sender: nil)
 //        }else{
 //            performSegueWithIdentifier("Skip", sender: nil)

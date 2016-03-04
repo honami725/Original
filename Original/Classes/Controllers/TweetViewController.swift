@@ -73,10 +73,11 @@ class TweetViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //画面をタップしたらキーボードをさげる
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+    //画面をタッチしたらキーボードを下げる
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     
 
     /*

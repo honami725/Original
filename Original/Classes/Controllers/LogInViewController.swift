@@ -14,6 +14,8 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var usernameTextField : UITextField!
     @IBOutlet var passwordTextField : UITextField!
     @IBOutlet var error : UILabel!
+    let saveData = NSUserDefaults.standardUserDefaults()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func login(sender:UIButton){
+        saveData.setInteger(1, forKey: "SKIP")
         PFUser.logInWithUsernameInBackground(self.usernameTextField.text!, password: self.passwordTextField.text!){
             (user, error) -> Void in
             if user != nil {
@@ -69,10 +72,11 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     
     
     
-    //画面をタップするとキーボードをさげる
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+    //画面をタッチしたらキーボードを下げる
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     
 
 

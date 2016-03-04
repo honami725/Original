@@ -201,24 +201,13 @@ class InputViewController: UIViewController {
             send["Weight"] = dateStr
             send["User"] = PFUser.currentUser()
             
-            //let firstWeight : Double = PFUser.currentUser()!.objectForKey("Weight") as! Double
-            //let goalWeight : Double = PFUser.currentUser()!.objectForKey("Weight2") as! Double
-            //weightData = firstWeight - goalWeight
-            //weightData2 = number - goalWeight
-            
-            //weightDataStr = String(weightData)
-            //weightData2Str = String(weightData2)
-            
-            //send["WEIGHT1"] = weightDataStr
-            //send["WEIGHT2"] = weightData2Str
     
             
-            
+            saveData.setDouble(number, forKey: "newWeight")
             
             // Parseに送信
             send.saveInBackground()
             
-            //saveData.setDouble(number, forKey: "weightData")
             performSegueWithIdentifier("Push", sender: nil)
             
         }

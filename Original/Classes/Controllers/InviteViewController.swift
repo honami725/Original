@@ -12,11 +12,16 @@ import Parse
 
 class InviteViewController: UIViewController, UITabBarControllerDelegate, UITextFieldDelegate{
     
-    var username:String!
+    //var username:String!
+    var userId : String!
+    var date:String!
     let saveData = NSUserDefaults.standardUserDefaults()
-    @IBOutlet var pairUserName : UITextField!
+    //@IBOutlet var pairUserName : UITextField!
+    @IBOutlet var pairId : UITextField!
+    @IBOutlet var error : UILabel!
     var yourName:String!
     var yourWeight:String!
+    var yourId:String!
     
 
 
@@ -43,10 +48,12 @@ class InviteViewController: UIViewController, UITabBarControllerDelegate, UIText
         UITabBar.appearance().tintColor = selectedColor
         
         //textField
-        self.pairUserName.delegate = self
-
-        username = PFUser.currentUser()!.username! as String
- 
+        //self.pairUserName.delegate = self
+        self.pairId.delegate = self
+        
+        //username = PFUser.currentUser()!.username! as String
+        userId = PFUser.currentUser()!.objectId! as String
+        date = PFUser.currentUser()!.objectForKey("Date") as! String
 
         
 
@@ -70,13 +77,17 @@ class InviteViewController: UIViewController, UITabBarControllerDelegate, UIText
     @IBAction func shere(sender:UIButton){
         // ShareExtensionに渡すURLの用意
         // 共有する項目
-        
-        let text1 = "【招待】\n対戦型ダイエットアプリ「You are FAT！」\n一緒に使いましょう！\n\n①まずはアプリをダウンロード\n②登録したら「設定」をクリックして『\(username)』を入れてね！"
-        
         let shareWebsite = NSURL(string: "https://itunes.apple.com/jp/genre/ios/id36?mt=8")!
+        
+        let text1 = "【招待】\n対戦型ダイエットアプリ\n「You are FAT！」\n一緒に使いましょう！\n\n①まずはアプリをダウンロード\n\(shareWebsite)\n\n②まずは登録しよう\n＜期限＞を一緒の\n『\(date)』\nにしてね！\n\n③次に「設定」のタブを開こう！\n対戦相手を検索のところに\n『\(userId)』\nを入れてスタート！"
+        
+        
+        
+        
         //let shareImage = UIImage(named: "1.png")!
         
-        let activityItems = [text1, shareWebsite]
+        
+        let activityItems = [text1]
         
         // 初期化処理
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
@@ -95,19 +106,22 @@ class InviteViewController: UIViewController, UITabBarControllerDelegate, UIText
     
     }
     
+    
     @IBAction func search(){
         let query:PFQuery = PFUser.query()!
-        query.whereKey("username", equalTo: self.pairUserName.text!)
+        //query.whereKey("username", equalTo: self.pairUserName.text!)
+        query.whereKey("objectId", equalTo: self.pairId.text!)
         //query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 if let dataObjects: [PFObject] = objects! {
                     for dataObject in dataObjects {
-                        print(dataObject["username"])
                         self.yourName = dataObject["username"] as? String
                         self.saveData.setObject(self.yourName, forKey: "YNAME")
                         self.yourWeight = dataObject["WEIGHT"] as? String
                         self.saveData.setObject(self.yourWeight, forKey: "YWEIGHT")
+                        self.error.text = "対戦相手がヒットしたよ！"
+                        
                     }
                     
                 }
@@ -122,6 +136,12 @@ class InviteViewController: UIViewController, UITabBarControllerDelegate, UIText
         self.view.endEditing(true)
         return false
     }
+    
+    //画面をタッチしたらキーボードを下げる
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
 
     /*

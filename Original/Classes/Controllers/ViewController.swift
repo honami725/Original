@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UITabBarControllerDelegate{
     
     let saveData = NSUserDefaults.standardUserDefaults()
     @IBOutlet var myNameLabel : UILabel!
@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldD
     @IBOutlet var yourWeightLabel : UILabel!
     @IBOutlet var error1 : UILabel!
     @IBOutlet var error2 : UILabel!
+    
+//    private var yourWeightArray: [String?] = [String?]()
 
     
     override func viewDidLoad() {
@@ -49,9 +51,15 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldD
         //NavigationBarを表示する
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
+        //結果画面に遷移
+        if self.myDateLabel.text == "0"{
+            performSegueWithIdentifier("Push", sender: nil)
 
+        }
         
 
+        
+        
         
         
     }
@@ -94,11 +102,13 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldD
         myDateLabel.text = String(components.day)
         
         
-        //あと何kg表示
+        //あと何kg表示        
         let weight : Double = saveData.doubleForKey("WEIGHT")
         let weight2 : Double = saveData.doubleForKey("WEIGHT2")
         let myWeight : Double = weight - weight2
         myWeightLabel.text = "\(myWeight)"
+        
+        
         
         
         //let myWeight = PFUser.currentUser()!.objectForKey("WEIGHT") as! Double
@@ -110,12 +120,15 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldD
             yourNameLabel.text = "名無し"
             error1.text = "対戦相手がいないよ！"
             error2.text = "『設定』から登録してね！"
+        }else if myDateLabel.text == "3" || myDateLabel.text == "2" || myDateLabel.text == "1"{
+            yourWeightLabel.text = "ひみつ!"
         }else{
             yourNameLabel.text = yourName as? String
             error1.text = ""
             error2.text = ""
         }
         
+        //相手の体重を表示
         
         let yourWeight = saveData.objectForKey("YWEIGHT")
         if yourWeight == nil {
@@ -127,13 +140,31 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITextFieldD
         
     }
 
+
     
     
-    // enter押すとキーボードをさげる
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
+
+    
+//    func read(){
+//        let yourId = saveData.objectForKey("YID") as! String
+//        let query:PFQuery = PFUser.query()!
+//        query.whereKey("User", equalTo: yourId)
+//        query.orderByAscending("createdAt")
+//        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//            if error == nil {
+//                if let dataObjects: [PFObject] = objects! {
+//                    for dataObject in dataObjects {
+//                        self.yourWeightArray.append(dataObject["Weight"] as? String)
+//                        
+//                    }
+//                }else{
+//                    print("error1")
+//                }
+//            }else{
+//                print("error2")
+//            }
+//        }
+//    }
     
     
 
